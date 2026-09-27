@@ -1,0 +1,22 @@
+/* A softer version of the mascot blue used in the account header. */
+body .side-header {
+    background:linear-gradient(165deg,#e0edf9 0%,#edf4fb 55%,#e5eff9 100%);
+    border-right:1px solid #cfdfef;
+    box-shadow:3px 0 14px rgba(25,75,125,.04);
+}
+body .side-header .side-header-menu > ul > li > a,
+body .side-header .side-header-sub-menu li > a { color:#466480; }
+body .side-header .side-header-menu > ul > li > a i,
+body .side-header .side-header-sub-menu li > a i { color:inherit; }
+body .side-header .side-header-menu > ul > li:hover > a,
+body .side-header .side-header-sub-menu li:hover > a { color:#155a9b; background:#d6e7f7; }
+body .side-header .side-header-menu > ul > li.active > a,
+body .side-header .side-header-menu > ul > li.open > a,
+body .side-header .side-header-sub-menu li.active > a { color:#14548e; background:#cbdef2; font-weight:600; }
+body .side-header .side-header-menu > ul > li.active > a::before,
+body .side-header .side-header-menu > ul > li:hover > a::before,
+body .side-header .side-header-sub-menu li.active > a::before,
+body .side-header .side-header-sub-menu li:hover > a::before { background:#236baa; }
+body .side-header .side-header-close { color:#245b8d; }
+body .side-header a:focus-visible,
+body .side-header .side-header-close:focus-visible { outline:2px solid #236baa; outline-offset:-3px; }

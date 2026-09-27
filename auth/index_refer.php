@@ -122,7 +122,7 @@ if (empty($_SESSION['csrf_token'])) {
         <input id="f_password" name="f_password" type="password" required class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500" autocomplete="current-password">
       </div>
       <div class="text-right">
-        <a href="#" onclick="return false;" class="text-sm text-blue-600 hover:underline">Forgot Password?</a>
+        <a href="<?php echo url('auth/forgot-password.php'); ?>" class="text-sm text-blue-600 hover:underline">Forgot Password?</a>
       </div>
       <p class="text-sm text-gray-600 text-center">For your first sign-in, use your identity card number without hyphens as the password.</p>
       <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-md font-semibold hover:bg-blue-700 transition">Sign In</button>

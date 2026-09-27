@@ -23,7 +23,9 @@
 #sijilTabContent [id^="btnLoad"] { min-height:39px; background:#e9eff8; color:#254875; border:1px solid #d8e3f2; }
 #kontinjenSubNav { gap:6px; padding:0 0 15px; margin-bottom:18px!important; border-bottom:1px solid #e8edf5; }
 #kontinjenSubNav .nav-link { display:inline-flex; align-items:center; gap:6px; border-radius:8px; padding:10px 13px; font-size:12px; font-weight:500; color:#61728b; background:#f6f8fc; }
-#kontinjenSubNav .nav-link.active { color:#1e4e91; background:#eaf1fc; box-shadow:inset 0 0 0 1px #cbddf7; }
+#kontinjenSubNav .nav-link.active { color:#fff; background:#183b68; box-shadow:0 3px 8px rgba(24,59,104,.12); }
+#kontinjenSubNav .nav-link:not(.active):hover { background:#eaf0f9; color:#183b68; }
+#kontinjenSubNav .nav-link.active .badge { background:#ffffff26!important; color:#fff!important; }
 #kontinjenSubNav .badge { background:#e0e8f5!important; color:#31547d!important; border:0!important; border-radius:5px; padding:4px 6px; font-size:10px; }
 #sijilTabContent [id^="printAll"] { min-height:39px; white-space:nowrap; padding:8px 14px; background:#2563c5; border-color:#2563c5; }
 #sijilTabContent .table-responsive { border:1px solid #e8edf5; border-radius:10px; margin-top:14px; }

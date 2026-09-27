@@ -153,7 +153,7 @@ class Auth {
             // Get user by email only
             $stmt = $this->db->prepare("
                   SELECT id, username, email, password_hash, full_name, role, status, 
-                      login_attempts, locked_until, kontinjen_id
+                      login_attempts, locked_until, kontinjen_id, password_changed_at
                 FROM users 
                 WHERE email = :email 
                 AND deleted_at IS NULL
@@ -250,7 +250,20 @@ class Auth {
      * Check if user is logged in
      */
     public function isLoggedIn() {
-        return Session::has('user_id') && Session::has('user_role');
+        if (!Session::has('user_id') || !Session::has('user_role')) return false;
+        // A password change revokes sessions created with the previous password.
+        $st = $this->db->prepare('SELECT password_changed_at, status, deleted_at FROM users WHERE id = ?');
+        $st->execute([Session::get('user_id')]);
+        $user = $st->fetch(PDO::FETCH_ASSOC);
+        $changed = $user['password_changed_at'] ?? null;
+        $matches = Session::has('password_version')
+            ? (string)Session::get('password_version') === (string)$changed
+            : (!$changed || (string)Session::get('logged_in_at', '') > (string)$changed);
+        if (!$user || $user['status'] !== 'active' || $user['deleted_at'] !== null || !$matches) {
+            Session::destroy();
+            return false;
+        }
+        return true;
     }
     
     /**
@@ -409,6 +422,7 @@ class Auth {
     private function createSession($user) {
         Session::regenerate();
         Session::set('user_id', $user['id']);
+        Session::set('password_version', (string)($user['password_changed_at'] ?? ''));
         Session::set('user_username', $user['username']);
         Session::set('user_email', $user['email']);
         Session::set('user_name', $user['full_name']);

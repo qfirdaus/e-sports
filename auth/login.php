@@ -120,13 +120,17 @@ $csrfToken = $_SESSION['csrf_token'];
     .tab-btn.active::after{ background:#0babcd; transform:translateY(3px); }
   </style>
 <link rel="stylesheet" href="<?= asset('css/login.css') ?>?v=<?= filemtime(__DIR__ . '/../assets/css/login.css') ?>">
+<link rel="stylesheet" href="<?php echo asset('css/public-header.css'); ?>?v=<?php echo filemtime(__DIR__ . '/../assets/css/public-header.css'); ?>">
 </head>
 <body class="bg-gray-100 login-page" x-data>
 
 <!-- Header -->
-<header class="bg-white shadow">
+<header class="login-header">
   <div class="max-w-7xl mx-auto p-4">
-    <img src="<?= htmlspecialchars($logoMain) ?>" alt="Logo" class="w-20">
+    <a class="header-brand-logos" href="<?php echo url('public/index.php'); ?>" aria-label="SAM 2026 home">
+      <img class="brand-upnm" src="<?php echo asset('img/logos/upnm-30.png'); ?>" width="247" height="66" alt="UPNM &middot; 30 Years">
+      <img src="<?= htmlspecialchars($logoMain) ?>" alt="SAM 2026" class="brand-sam login-header-logo">
+    </a>
     <nav class="flex flex-wrap gap-4 border-b border-gray-300 mt-4" aria-label="Main navigation">
       <a href="<?php echo url('public/index.php'); ?>" class="tab-btn active">Home</a>
       <a href="<?php echo url('public/contingents.php'); ?>" class="tab-btn">Contingent</a>
@@ -238,7 +242,7 @@ $csrfToken = $_SESSION['csrf_token'];
         <input id="password" name="password" type="password" required class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500" autocomplete="current-password">
       </div>
       <div class="text-right">
-        <a href="#" onclick="return false;" class="text-sm text-blue-600 hover:underline">Forgot Password?</a>
+        <a href="<?php echo url('auth/forgot-password.php'); ?>" class="text-sm text-blue-600 hover:underline">Forgot Password?</a>
       </div>
       <p class="text-sm text-gray-600 text-center">Sign in with your registered email address and password.</p>
       <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-md font-semibold hover:bg-blue-700 transition">Sign In</button>

@@ -12,6 +12,7 @@ if (function_exists('getAuth')) {
     }
 }
 
+if ($currentUser && !Session::get('profile_csrf')) Session::set('profile_csrf', bin2hex(random_bytes(32)));
 $userName = $currentUser['full_name'] ?? 'User';
 $userEmail = $currentUser['email'] ?? '';
 ?>
@@ -95,6 +96,7 @@ $userEmail = $currentUser['email'] ?? '';
     .public-header .sukan-logos { order:2; }
     .public-header .header-user { order:3; margin-left:8px; }
     </style>
+<link rel="stylesheet" href="<?php echo asset('css/public-header.css'); ?>?v=<?php echo filemtime(__DIR__ . '/../assets/css/public-header.css'); ?>">
 </head>
 <body class="public-page">
 
@@ -107,9 +109,9 @@ $userEmail = $currentUser['email'] ?? '';
 
                 <!-- Header Logo (Header Left) Start -->
                 <div class="header-logo col-auto">
-                    <a href="<?php echo url('public/index.php'); ?>">
-                        <img src="<?php echo asset('img/logos/logo-main.png'); ?>" alt="<?php echo SITE_NAME; ?>">
-                        <img src="<?php echo asset('img/logos/logo-main.png'); ?>" class="logo-light" alt="<?php echo SITE_NAME; ?>">
+                    <a class="header-brand-logos" href="<?php echo url('public/index.php'); ?>" aria-label="SAM 2026 home">
+                        <img class="brand-upnm" src="<?php echo asset('img/logos/upnm-30.png'); ?>" width="247" height="66" alt="UPNM · 30 Years">
+                        <img class="brand-sam" src="<?php echo asset('img/logos/logo-main.png'); ?>" alt="SAM 2026">
                     </a>
                 </div><!-- Header Logo (Header Left) End -->
 
@@ -202,6 +204,7 @@ $userEmail = $currentUser['email'] ?? '';
                                             <div class="body">
                                                 <ul>
                                                     <!-- Removed duplicate 'Settings' entry from header (already in sidebar) -->
+                                                    <li><a class="trigger-edit-profile" href="#"><i class="zmdi zmdi-account"></i> Edit Profile</a></li>
                                                     <li><a class="trigger-change-password" href="#"><i class="zmdi zmdi-key"></i> Change Password</a></li>
                                                     <li><a class="confirm-logout" href="<?php echo url('auth/logout.php'); ?>"><i class="zmdi zmdi-lock-open"></i>Sign out</a></li>
                                                 </ul>
@@ -266,6 +269,7 @@ $userEmail = $currentUser['email'] ?? '';
             else bindLogoutConfirm();
         })();
     </script>
+        <?php require __DIR__ . '/profile-modal.php'; ?>
         <!-- Change Password Modal -->
         <div class="modal fade" id="changePasswordModal" tabindex="-1" aria-labelledby="changePasswordModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -275,15 +279,16 @@ $userEmail = $currentUser['email'] ?? '';
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <form id="changePasswordForm">
+                        <input type="hidden" name="csrf" value="<?php echo htmlspecialchars((string)Session::get('profile_csrf'), ENT_QUOTES, 'UTF-8'); ?>">
                         <div class="modal-body">
                             <div class="mb-2 text-muted small">Signed in as <?php echo htmlspecialchars($userName, ENT_QUOTES, 'UTF-8'); ?><?php if($userEmail) echo ' — ' . htmlspecialchars($userEmail, ENT_QUOTES, 'UTF-8'); ?></div>
                             <div class="mb-3">
                                 <label class="form-label">Current Password</label>
-                                <input type="password" name="current_password" class="form-control" required minlength="6">
+                                <input type="password" name="current_password" class="form-control" required autocomplete="current-password">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">New Password</label>
-                                <input type="password" id="newPassword" name="new_password" class="form-control" required minlength="8" autocomplete="new-password">
+                                <input type="password" id="newPassword" name="new_password" class="form-control" required minlength="<?php echo (int)PASSWORD_MIN_LENGTH; ?>" maxlength="72" autocomplete="new-password">
                             </div>
                             <div id="passwordPolicy" class="mb-2 small text-muted">
                                 <strong>Password Policy:</strong>
@@ -304,7 +309,7 @@ $userEmail = $currentUser['email'] ?? '';
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Confirm New Password</label>
-                                <input type="password" id="confirmPassword" name="confirm_password" class="form-control" required minlength="8" autocomplete="new-password">
+                                <input type="password" id="confirmPassword" name="confirm_password" class="form-control" required minlength="<?php echo (int)PASSWORD_MIN_LENGTH; ?>" maxlength="72" autocomplete="new-password">
                             </div>
                             <div id="changePasswordMessage" class="text-muted small"></div>
                         </div>
@@ -352,6 +357,7 @@ $userEmail = $currentUser['email'] ?? '';
                                         var submitBtn = form ? form.querySelector('button[type="submit"]') : null;
 
                                         // build policy config from server-side constants
+                                        var pendingPasswordChange = false;
                                         var pwdPolicy = {
                                             minLength: <?php echo defined('PASSWORD_MIN_LENGTH') ? (int)PASSWORD_MIN_LENGTH : 0; ?>,
                                             requireUpper: <?php echo (defined('PASSWORD_REQUIRE_UPPERCASE') && PASSWORD_REQUIRE_UPPERCASE) ? 'true' : 'false'; ?>,
@@ -384,7 +390,8 @@ $userEmail = $currentUser['email'] ?? '';
                                                 document.querySelectorAll('#passwordPolicy [data-policy]').forEach(function(li){ if (li.dataset.ok !== '1') allOk = false; });
                                                 if (!pwd || !conf) allOk = false;
                                                 if (pwd !== conf) allOk = false;
-                                                if (submitBtn) submitBtn.disabled = !allOk;
+                                                if (new TextEncoder().encode(pwd).length > 72) allOk = false;
+                                                if (submitBtn) submitBtn.disabled = pendingPasswordChange || !allOk;
                                                 return allOk;
                                             }catch(e){ return false; }
                                         }
@@ -398,9 +405,11 @@ $userEmail = $currentUser['email'] ?? '';
 
                                         form.addEventListener('submit', function(e){
                                             e.preventDefault();
+                                            if (pendingPasswordChange) return;
                                             if (!validateFormState()) {
                                                 var msg = document.getElementById('changePasswordMessage'); if (msg) msg.textContent = 'Please meet the password requirements.'; return;
                                             }
+                                            pendingPasswordChange = true; submitBtn.disabled = true;
                                             var fd = new FormData(form);
                                             var msg = document.getElementById('changePasswordMessage');
                                             msg.textContent = '';
@@ -413,12 +422,13 @@ $userEmail = $currentUser['email'] ?? '';
                                                         if (res && res.success){
                                                                 if (window.Swal) Swal.fire({ icon: 'success', title: 'Success', text: res.message || 'Password updated.' });
                                                                 // hide modal
-                                                                if (window.bootstrap && bootstrap.Modal) {
+                                                                if (window.Swal && window.bootstrap && bootstrap.Modal) {
                                                                         var modalEl = document.getElementById('changePasswordModal');
                                                                         var inst = bootstrap.Modal.getInstance(modalEl);
                                                                         if (inst) inst.hide();
                                                                 }
                                                                 form.reset();
+                                                                if (msg) msg.textContent = res.message || 'Password updated.';
                                                         } else {
                                                                 var text = (res && res.message) ? res.message : 'Unable to update the password.';
                                                                 if (window.Swal) Swal.fire({ icon: 'error', title: 'Error', text: text });
@@ -427,7 +437,8 @@ $userEmail = $currentUser['email'] ?? '';
                                                 }).catch(function(err){
                                                         console.error('change_password error', err);
                                                         if (window.Swal) Swal.fire({ icon: 'error', title: 'Error', text: 'Network error. Please try again.' });
-                                                });
+                                                        else if (msg) msg.textContent = 'Network error. Please try again.';
+                                                }).finally(function(){ pendingPasswordChange = false; validateFormState(); });
                                         });
                                 } catch(e) { console && console.warn && console.warn(e); }
                         }

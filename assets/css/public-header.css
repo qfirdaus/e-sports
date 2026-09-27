@@ -1,0 +1,99 @@
+/* Mascot jersey blue across the public portal, sign-in and account headers. */
+.login-page .login-header,
+.public-header.header-section,
+.account-header.header-section {
+    background:linear-gradient(165deg,#e0edf9 0%,#edf4fb 55%,#e5eff9 100%);
+    border-bottom:1px solid #cfdfef;
+    box-shadow:0 2px 10px rgba(25,75,125,.04);
+}
+.login-page .login-header-logo,
+.public-header .header-logo a img {
+    background:transparent;
+    padding:0;
+    border-radius:0;
+    box-shadow:none;
+}
+.login-page .login-header nav,
+.public-header .public-tabs { border-color:#cfdfef; gap:10px; }
+.login-page .login-header .tab-btn,
+.public-header .public-tab {
+    color:#466480;
+    border-radius:7px 7px 0 0;
+    padding:10px 14px;
+    transition:background .15s ease,color .15s ease;
+}
+.login-page .login-header .tab-btn:hover,
+.public-header .public-tab:hover { color:#155a9b; background:#d6e7f7; }
+.login-page .login-header .tab-btn.active,
+.public-header .public-tab.active { color:#14548e; background:#cbdef2; font-weight:600; }
+.login-page .login-header .tab-btn.active::after,
+.public-header .public-tab.active::after,
+.public-header .public-tab:hover::after,
+.public-header .public-tab:focus-visible::after { background:#236baa; }
+.login-page .login-header a:focus-visible,
+.public-header .public-tab:focus-visible { outline:2px solid #236baa; outline-offset:3px; color:#14548e; }
+
+.account-header.header-section .header-logo,
+.account-header.header-section .header-right { background:transparent; }
+.account-header .header-logo a { background:transparent; }
+.account-header .header-logo a img { background:transparent; }
+/* Keep both institutional marks aligned, with their original aspect ratios. */
+.login-header .header-brand-logos,
+.public-header .header-logo .header-brand-logos,
+.account-header .header-logo .header-brand-logos {
+    display:inline-flex; align-items:center; gap:18px; line-height:1;
+}
+.login-header .header-brand-logos .brand-upnm,
+.public-header .header-logo .brand-upnm { width:190px; height:auto; flex:none; }
+.login-header .header-brand-logos .brand-sam,
+.public-header .header-logo .brand-sam { width:80px; height:auto; flex:none; }
+.account-header .header-logo .header-brand-logos { gap:12px; }
+.account-header .header-logo .brand-upnm { width:170px; height:auto; flex:none; }
+.account-header .header-logo .brand-sam { width:60px; height:auto; flex:none; }
+@media(max-width:575px) {
+    .login-header .header-brand-logos,
+    .public-header .header-logo .header-brand-logos { gap:12px; }
+    .login-header .header-brand-logos .brand-upnm,
+    .public-header .header-logo .brand-upnm { width:155px; }
+    .login-header .header-brand-logos .brand-sam,
+    .public-header .header-logo .brand-sam { width:60px; }
+}
+/* Equal-height brand marks; blend the SAM logo's white canvas into the header. */
+.login-header .header-brand-logos .brand-upnm,
+.login-header .header-brand-logos .brand-sam,
+.public-header .header-logo .brand-upnm,
+.public-header .header-logo .brand-sam {
+    width:auto; height:51px; object-fit:contain;
+}
+.account-header .header-logo .brand-upnm,
+.account-header .header-logo .brand-sam {
+    width:auto; height:45px; object-fit:contain;
+}
+.login-header .header-brand-logos .brand-sam,
+.public-header .header-logo .brand-sam,
+.account-header .header-logo .brand-sam {
+    mix-blend-mode:multiply; background:transparent; box-shadow:none;
+}
+@media(max-width:575px) {
+    .login-header .header-brand-logos .brand-upnm,
+    .login-header .header-brand-logos .brand-sam,
+    .public-header .header-logo .brand-upnm,
+    .public-header .header-logo .brand-sam,
+    .account-header .header-logo .brand-upnm,
+    .account-header .header-logo .brand-sam { width:auto; height:41px; }
+}
+
+/* A pale shared logo panel keeps both original marks readable on jersey blue. */
+.login-header .header-brand-logos,
+.public-header .header-logo .header-brand-logos,
+.account-header .header-logo .header-brand-logos {
+    background:transparent;
+    padding:8px; border-radius:10px;
+}
+.account-header .header-right .header-user > a,
+.account-header .header-right .header-user > button,
+.account-header .header-right .header-user .dropdown > button,
+.account-header .header-right .header-user .dropdown > a,
+.account-header .side-header-toggle button { color:#466480; }
+.account-header #userDropdown,
+.account-header button.side-header-toggle { color:#466480; }
