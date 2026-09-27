@@ -1,0 +1,23 @@
+# Local credentials and configuration
+.env
+.env.*
+.ENV
+.ENV.*
+!.env.example
+*.pem
+*.key
+# Runtime data and database backups
+/storage/
+/logs/
+/uploads/
+*.log
+*.bak
+*.bak-*
+*.sql.gz
+# Local editor and operating-system files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+# Captured local diagnostic page
+/tests/tesdata.php

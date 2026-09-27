@@ -1,0 +1,17 @@
+/* Sports uses the shared management layout with sport-specific categories. */
+@media screen {
+.sports-view #sportsSearch { min-height:39px; border:1px solid #dce4f0; border-radius:0 8px 8px 0; font-size:12px; background:#fff; }
+.sports-view .table { min-width:850px; }
+.sports-view .table th:nth-child(2) { min-width:150px; }
+.sports-view .table tbody td:nth-child(2) { min-width:150px; }
+.sports-view .table code { color:#758298; background:#f0f4fa; border-radius:4px; padding:2px 5px; font-size:10px; }
+.sports-view .table .badge.bg-info { background:#edf2fa!important; color:#46638b; padding:6px 9px; font-size:10px; font-weight:500; white-space:normal; text-align:left; line-height:1.4; }
+.sports-view .table .badge.bg-secondary { background:#eef0f4!important; color:#6a7689; border-radius:20px; }
+.sports-view .table .btn-outline-info { background:#eef7fa; color:#33748a; border-color:#d7eaf0; }
+.sports-view .management-stats > div:nth-child(2) .h5 { color:#193961; }
+#editSportModal .modal-content, #viewSportModal .modal-content { border:1px solid #e3eaf3; border-radius:14px; }
+#editSportModal .modal-header, #viewSportModal .modal-header { background:#f8fafd; border-bottom:1px solid #e8edf5; padding:20px; }
+#editSportModal .modal-title, #viewSportModal .modal-title { color:#193961; font-size:18px; font-weight:600; }
+#editSportModal .form-control, #editSportModal .form-select { border-color:#dce4f0; border-radius:8px; font-size:13px; }
+#editSportModal .btn, #viewSportModal .btn { border-radius:8px; }
+}

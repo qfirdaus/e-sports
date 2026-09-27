@@ -1,0 +1,13 @@
+@import url("style-primary.css");
+
+/* Cyan theme overrides */
+:root {
+}
+
+.bg-primary { background-color: #17a2b8 !important; }
+.text-primary { color: #17a2b8 !important; }
+.text-primary a { color: #17a2b8 !important; }
+
+.btn-primary, .btn-primary:hover, .btn-primary:focus { background-color: #17a2b8 !important; border-color: #17a2b8 !important; }
+
+.header-section, .main-wrapper .header-section { border-color: rgba(23,162,184,0.08); }

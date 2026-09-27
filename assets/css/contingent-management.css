@@ -1,0 +1,49 @@
+@media screen {
+.contingent-management { color:#263b59; }
+.contingent-management .management-heading .card { background:transparent!important; border:0; box-shadow:none!important; }
+.contingent-management .management-heading .card-body { padding:0!important; align-items:center!important; flex-wrap:wrap; }
+.management-eyebrow { font-size:10px; font-weight:700; color:#62748e; letter-spacing:1.7px; margin-bottom:10px; }
+.contingent-management h2 { font-size:30px; font-weight:700; letter-spacing:-.7px; color:#142b50; }
+.management-heading p { font-size:13px; margin-top:8px; color:#758298!important; }
+.management-heading .card-body > .d-flex { flex-wrap:wrap; justify-content:flex-end; }
+.management-stats { display:flex; gap:8px; }
+.management-stats > div { margin:0!important; padding:12px 16px; border:1px solid #e3eaf3; border-radius:10px; background:#fafbfd; min-width:78px; }
+.management-stats .h5 { color:#193961; font-size:23px; font-weight:700; font-variant-numeric:tabular-nums; }
+.management-stats .small { font-size:10px; margin-top:4px; }
+.management-stats > div:nth-child(2) .h5 { color:#25744f; }
+.contingent-management .management-heading .btn-group { display:flex; gap:8px; flex-wrap:wrap; }
+.contingent-management .management-heading .btn { border-radius:8px!important; margin:0; font-size:12px; padding:10px 14px; }
+.contingent-management .btn-primary { background:#2563c5; border-color:#2563c5; }
+.contingent-management .card { border:1px solid #e3eaf3; border-radius:16px; box-shadow:0 4px 22px rgba(20,43,80,.045)!important; overflow:hidden; }
+.contingent-management .card-header { padding:18px 20px; background:#fff; border-bottom:1px solid #e8edf5; color:#1b3153; gap:14px; flex-wrap:wrap; }
+.contingent-management .card-header strong { font-size:15px; }
+.contingent-management .card-header .small { font-size:11px; margin-top:5px; }
+.contingent-management .card-body { padding:16px; }
+.contingent-management .input-group-text { background:#f8fafd; border-color:#dce4f0; border-radius:8px 0 0 8px; color:#7789a2; }
+.contingent-management #contingentSearch { min-height:39px; border:1px solid #dce4f0; border-radius:0 8px 8px 0; font-size:12px; background:#fff; }
+.contingent-management .table { min-width:1020px; margin:0; color:#263b59; font-size:12px; }
+.contingent-management .table thead th { padding:14px 12px; background:#f5f8fc; border-top:0; border-bottom:1px solid #e8edf5; color:#64758e; font-size:11px; font-weight:600; white-space:nowrap; }
+.contingent-management .table tbody td { padding:13px 12px; border-color:#edf1f7; line-height:1.7; vertical-align:middle; }
+.contingent-management .table tbody tr { background:#fff; }
+.contingent-management .table tbody tr:nth-child(even) { background:#fafbfd; }
+.contingent-management .table tbody tr:hover { background:#edf4ff; }
+.contingent-management .table tbody td:first-child { color:#8795aa; font-size:11px; }
+.contingent-management .table .fw-bold, .contingent-management .table .fw-semibold { font-weight:500!important; color:#193961; }
+.contingent-management .table .small { color:#7a889d!important; font-size:11px; }
+.contingent-management .table .badge { padding:6px 9px; font-size:10px; font-weight:600; border-radius:7px; }
+.contingent-management .table .badge-primary, .contingent-management .table .bg-primary { background:#eaf1fc!important; color:#31598e; }
+.contingent-management .table .badge-success, .contingent-management .table .bg-success { background:#e6f4ec!important; color:#25744f; border-radius:20px; }
+.contingent-management .table .badge-danger, .contingent-management .table .bg-danger { background:#fceef0!important; color:#a54857; border-radius:20px; }
+.contingent-management .table .btn { display:inline-flex; align-items:center; justify-content:center; min-width:32px; min-height:32px; border-radius:8px; font-size:12px; margin:2px; }
+.contingent-management .table .btn-outline-primary { background:#f1f5fc; color:#31598e; border-color:#d8e4f4; }
+.contingent-management .table .btn-outline-danger { background:#fff6f7; color:#b44f60; border-color:#efd6dc; }
+.contingent-management .table .btn:hover { filter:brightness(.95); }
+.contingent-management .modal-content { border:1px solid #e3eaf3; border-radius:14px; }
+.contingent-management .modal-header { border-bottom:1px solid #e8edf5; background:#f8fafd; padding:20px; }
+.contingent-management .modal-title { color:#193961; font-size:18px; font-weight:600; }
+.contingent-management .modal .form-control, .contingent-management .modal .form-select { border:1px solid #dce4f0; border-radius:8px; font-size:13px; }
+.contingent-management .modal .btn { border-radius:8px; }
+.contingent-management button:focus-visible, .contingent-management a:focus-visible, .contingent-management input:focus-visible { outline:2px solid #5284ce; outline-offset:3px; }
+@media(max-width:991px) { .contingent-management .management-heading .card-body { align-items:flex-start!important; } .management-heading .card-body > .d-flex { justify-content:flex-start; } }
+@media(max-width:575px) { .contingent-management { padding-left:0!important; padding-right:0!important; } .contingent-management .card-body { padding:10px; } .contingent-management .card-header { padding:16px; } .management-stats > div { padding:10px 14px; } .contingent-management .card-header > .d-flex, .contingent-management .card-header .input-group { width:100%; margin-right:0!important; } }
+}

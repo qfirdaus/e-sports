@@ -1,0 +1,29 @@
+/* User-specific additions to the shared management layout. */
+@media screen {
+.users-view .table th, .users-view .table td { vertical-align:top!important; }
+.users-view .table td:nth-child(3) { overflow-wrap:anywhere; }
+.users-view #usersSearch { min-height:39px; border:1px solid #dce4f0; border-radius:0 8px 8px 0; font-size:12px; background:#fff; }
+.users-view #usersPageSizeTopSelect { min-height:39px; border:1px solid #dce4f0; border-radius:8px; color:#526d93; background-color:#fff; font-size:12px; }
+.users-view .table { min-width:850px; }
+
+.users-view .table td:nth-child(4) { color:#526d93; font-size:11px; }
+.users-view .table td:nth-child(2) { color:#193961; font-weight:500; }
+.users-view .table .badge.bg-secondary { background:#eef0f4!important; color:#6a7689; border-radius:20px; }
+.users-view .management-stats > div:nth-child(2) .h5 { color:#193961; }
+.users-view #usersPagingInfo { font-size:11px; color:#7a889d!important; }
+.users-view #usersPagination { padding-top:8px; }
+.users-view #usersPagination .pagination { gap:6px; flex-wrap:wrap; }
+.users-view #usersPagination .page-link { border:1px solid #dce4f0; border-radius:8px; padding:8px 12px; color:#526d93; font-size:12px; box-shadow:none; }
+.users-view #usersPagination .active .page-link { color:#fff; background:#183b68; border-color:#183b68; }
+.users-view #usersPagination .disabled .page-link { color:#a0adbe; background:#f8fafd; }
+#addUserModal .modal-content { border:1px solid #e3eaf3; border-radius:14px; }
+#addUserModal .modal-header { background:#f8fafd; border-bottom:1px solid #e8edf5; padding:20px; }
+#addUserModal .modal-title { color:#193961; font-size:18px; font-weight:600; }
+#addUserModal .form-control, #addUserModal .form-select { border-color:#dce4f0; border-radius:8px; font-size:13px; }
+#addUserModal .btn { border-radius:8px; }
+@media(max-width:575px) {
+.users-view .card-header > .d-flex { gap:8px; flex-wrap:wrap; }
+.users-view .card-header .input-group { min-width:0!important; flex:1 1 180px; width:auto; }
+.users-view #usersPageSizeTopSelect { margin-left:0!important; }
+}
+}

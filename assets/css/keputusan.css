@@ -1,0 +1,23 @@
+/* Recording page shares the results layout; all four filters occupy equal columns. */
+@media screen {
+.keputusan-view .results-filters { grid-template-columns:repeat(4,minmax(0,1fr)); }
+.keputusan-view .results-filters > div:last-child { grid-column:auto; }
+.keputusan-view .results-filters > div:last-child label { margin-bottom:7px; }
+.keputusan-view .form-select { height:40px; border:1px solid #dce4f0; border-radius:8px; background-color:#fff; color:#263b59; font-size:12px; }
+.keputusan-view .form-select:disabled { background:#f0f3f8; color:#98a3b3; }
+.keputusan-view #btnAddKeputusan { background:#2563c5; border-color:#2563c5; color:#fff; min-height:40px; }
+.keputusan-view .results-heading .card-body { align-items:center!important; }
+.keputusan-view .table tbody td { font-weight:400!important; }
+.keputusan-view .table td:last-child .btn { min-width:32px; min-height:32px; display:inline-flex; align-items:center; justify-content:center; margin:2px; }
+.keputusan-view .table .btn-outline-danger { background:#fff6f7; color:#b44f60; border-color:#efd6dc; }
+.keputusan-view #keputusanPager { padding-top:14px; gap:10px; flex-wrap:wrap; color:#7a889d; font-size:11px; }
+.keputusan-view #keputusanPager .page-link { border-radius:8px; color:#526d93; border-color:#dce4f0; }
+.keputusan-view #keputusanPager .active .page-link { background:#183b68; border-color:#183b68; color:#fff; }
+.keputusan-editor .modal-content { border:1px solid #e3eaf3; border-radius:14px; }
+.keputusan-editor .modal-header { background:#f8fafd; border-bottom:1px solid #e8edf5; padding:20px; }
+.keputusan-editor .modal-title { color:#193961; font-size:18px; font-weight:600; }
+.keputusan-editor .form-control, .keputusan-editor .form-select { border-color:#dce4f0; border-radius:8px; font-size:13px; }
+.keputusan-editor .btn { border-radius:8px; }
+@media(max-width:991px) { .keputusan-view .results-filters { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:575px) { .keputusan-view .results-filters { grid-template-columns:minmax(0,1fr); } .keputusan-view .results-heading .card-body { align-items:flex-start!important; } }
+}

@@ -1,0 +1,29 @@
+@media screen {
+.matrix-view { color:#263b59; }
+.matrix-eyebrow { font-size:10px; font-weight:700; letter-spacing:1.7px; color:#62748e; margin-bottom:10px; }
+.matrix-view h2 { font-size:30px; color:#142b50; font-weight:700; letter-spacing:-.7px; }
+.matrix-view h2 + p { font-size:13px; margin-top:8px; color:#758298!important; }
+.matrix-view > .row { margin-bottom:24px!important; }
+.matrix-view .alert { border-radius:10px; padding:14px 18px; font-size:12px; border:1px solid #e1eaf5; }
+.matrix-view .alert-info { background:#f0f5fc; color:#526d93; }
+.matrix-view .card { border:1px solid #e3eaf3; border-radius:16px; box-shadow:0 4px 22px rgba(20,43,80,.045); overflow:hidden; }
+.matrix-panel-header { display:flex; justify-content:space-between; align-items:center; gap:12px; padding:18px 20px; border-bottom:1px solid #e8edf5; flex-wrap:wrap; }
+.matrix-panel-header strong { color:#1b3153; font-size:15px; }
+.matrix-panel-header span { font-size:11px; color:#62748e; background:#f0f4fa; border-radius:20px; padding:6px 10px; }
+.matrix-view .card-body { padding:16px; }
+.matrix-view .table-responsive { max-height:72vh; overflow:auto; }
+.matrix-view .table { min-width:1150px; margin:0; color:#263b59; font-size:12px; border-collapse:separate; border-spacing:0; }
+.matrix-view .table thead th { position:sticky; top:0; z-index:1; background:#f5f8fc; color:#64758e; border-top:0; border-bottom:1px solid #dce5f2; font-size:10px; font-weight:600; padding:14px 10px; white-space:nowrap; }
+.matrix-view .table tbody td { padding:10px; border-top:0; border-bottom:1px solid #edf1f7; vertical-align:top; line-height:1.6; }
+.matrix-view .table tbody tr:nth-child(even) { background:#fafbfd; }
+.matrix-view .table tbody tr:hover { background:#edf4ff; }
+.matrix-view .table td:first-child { color:#8795aa; font-size:11px; }
+.matrix-view .table td:nth-child(3) { color:#193961; font-weight:500; }
+.matrix-view .table code { color:#64758e; font-size:10px; background:#f0f3f8; padding:3px 5px; border-radius:4px; white-space:nowrap; }
+.matrix-view .badge { font-size:10px; font-weight:600; line-height:1.4; padding:5px 8px; border-radius:6px; }
+.matrix-view .badge.bg-success { background:#e6f4ec!important; color:#25744f; }
+.matrix-view .badge.bg-danger { background:#fceef0!important; color:#a54857; }
+.matrix-view .badge.bg-primary { background:#eaf1fc!important; color:#31598e; }
+.matrix-view .badge.bg-secondary { background:#eef0f4!important; color:#788497; }
+@media(max-width:767px) { .matrix-view { padding-left:0!important; padding-right:0!important; } .matrix-view .card-body { padding:10px; } .matrix-panel-header { padding:16px; } }
+}

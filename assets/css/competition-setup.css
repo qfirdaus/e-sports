@@ -1,0 +1,35 @@
+@media screen {
+.competition-setup { color:#263b59; }
+.setup-eyebrow { color:#62748e; font-size:10px; font-weight:700; letter-spacing:1.7px; margin-bottom:10px; }
+.competition-setup h2 { color:#142b50; font-size:30px; font-weight:700; letter-spacing:-.7px; }
+.competition-setup h2 + p { font-size:13px; margin-top:8px; color:#758298!important; }
+.competition-setup > .row { margin-bottom:24px!important; }
+.competition-setup > .card { border:1px solid #e3eaf3; border-radius:16px; box-shadow:0 4px 22px rgba(20,43,80,.045); }
+.competition-setup > .card > .card-body { padding:0; }
+.competition-setup #setupTabs { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; background:#fafbfd; padding:18px 22px; border-bottom:1px solid #e8edf5; border-radius:16px 16px 0 0; margin-bottom:0!important; }
+.competition-setup #setupTabs .nav-link { width:100%; text-align:left; padding:13px 16px; border-radius:9px; font-size:12px; font-weight:600; color:#526d93; background:#edf2fa; border:1px solid #e0e8f4; }
+.competition-setup #setupTabs .nav-link.active { background:#183b68; color:#fff; border-color:#183b68; }
+.competition-setup #setupTabs .nav-link.disabled { background:#f4f6fa; color:#96a1b2; border-color:#e8edf5; }
+.competition-setup .tab-content { padding:26px; }
+.competition-setup h5 { color:#193961; font-size:16px; font-weight:600; margin-bottom:20px; }
+/* Use both columns in the first step instead of leaving half the panel empty. */
+.competition-setup #form-tab1 > .row > .col-md-6 { flex:0 0 100%; max-width:100%; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px 24px; }
+.competition-setup #form-tab1 h5 { grid-column:1/-1; margin:0 0 2px; }
+.competition-setup #form-tab1 .mb-3 { margin:0!important; }
+.competition-setup #form-tab1 .mb-3:last-child { grid-column:1/-1; border-top:1px solid #e8edf5; padding-top:20px; margin-top:4px!important; }
+.competition-setup .form-label { font-size:12px; font-weight:500; color:#526580; margin-bottom:7px; }
+.competition-setup .form-control, .competition-setup .form-select { min-height:42px; border:1px solid #dce4f0; border-radius:8px; font-size:13px; background-color:#fff; color:#263b59; }
+.competition-setup .form-control:focus, .competition-setup .form-select:focus { border-color:#5284ce; box-shadow:0 0 0 3px rgba(37,99,197,.1); }
+.competition-setup .form-control:read-only:not(select), .competition-setup .form-select:disabled { background:#f4f6fa; }
+.competition-setup .form-text { font-size:11px; line-height:1.6; color:#8794a7; margin-top:6px; }
+.competition-setup .btn { min-height:39px; padding:9px 15px; font-size:12px; border-radius:8px; }
+.competition-setup .btn-primary { background:#2563c5; border-color:#2563c5; }
+.competition-setup .alert { font-size:12px; line-height:1.6; border-radius:10px; }
+.competition-setup .alert-info { background:#f0f5fc; color:#526d93; border-color:#dfe8f5; }
+.competition-setup .table { font-size:12px; color:#263b59; }
+.competition-setup .table th { background:#f5f8fc; color:#64758e; font-size:11px; font-weight:600; padding:12px; }
+.competition-setup .table td { padding:12px; vertical-align:top; border-color:#e8edf5; }
+.competition-setup .list-group-item { border-color:#e8edf5; font-size:12px; }
+.competition-setup button:focus-visible { outline:2px solid #5284ce; outline-offset:3px; }
+@media(max-width:767px) { .competition-setup { padding-left:0!important; padding-right:0!important; } .competition-setup #setupTabs { grid-template-columns:1fr; padding:14px; gap:7px; } .competition-setup #setupTabs .nav-link { padding:10px 12px; } .competition-setup .tab-content { padding:16px; } .competition-setup #form-tab1 > .row > .col-md-6 { grid-template-columns:minmax(0,1fr); } .competition-setup #tab-3 .col-md-6 { overflow-x:auto; } }
+}

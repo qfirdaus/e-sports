@@ -1,0 +1,30 @@
+@media screen {
+.knockout-editor { color:#263b59; }
+.knockout-eyebrow { font-size:10px; font-weight:700; letter-spacing:1.7px; color:#62748e; margin-bottom:10px; }
+.knockout-editor h4 { font-size:30px; color:#142b50; font-weight:700; letter-spacing:-.7px; }
+.knockout-editor h4 + p { color:#758298!important; font-size:13px; margin-top:8px; }
+.knockout-editor > .row:first-child .card { box-shadow:none!important; background:transparent; }
+.knockout-editor > .row:first-child .card-body { padding:0; }
+.knockout-editor > .row:first-child { margin-bottom:24px!important; }
+.knockout-editor .card { border:1px solid #e3eaf3; border-radius:14px; box-shadow:0 4px 22px rgba(20,43,80,.045)!important; }
+.knockout-editor .card-body { padding:20px; }
+.knockout-editor .card-header { background:#f8fafd; border-bottom:1px solid #e8edf5; padding:16px 20px; color:#193961; font-size:14px; border-radius:14px 14px 0 0; gap:12px; flex-wrap:wrap; }
+.knockout-editor .knockout-filter-label { flex-basis:100%; font-size:11px; font-weight:600; color:#65748b; margin:0 0 4px; }
+.knockout-editor #roundPicker { flex:1 1 320px; min-width:0!important; max-width:none!important; }
+.knockout-editor .form-control, .knockout-editor .form-select { min-height:42px; border:1px solid #dce4f0; border-radius:8px; font-size:13px; color:#263b59; background-color:#fff; }
+.knockout-editor .form-control:focus, .knockout-editor .form-select:focus { border-color:#5284ce; box-shadow:0 0 0 3px rgba(37,99,197,.1); }
+.knockout-editor .btn { border-radius:8px; padding:9px 14px; min-height:39px; font-size:12px; }
+.knockout-editor .btn-primary { background:#2563c5; border-color:#2563c5; }
+.knockout-editor .btn-outline-primary { background:#f1f5fc; color:#31598e; border-color:#d8e4f4; }
+.knockout-editor .btn-outline-danger { background:#fff6f7; color:#b44f60; border-color:#efd6dc; }
+.knockout-editor .alert { border-radius:10px; font-size:12px; line-height:1.7; padding:15px 18px; }
+.knockout-editor .alert-danger { background:#fff2f4; border:1px solid #f1dce2; color:#a34b5d; }
+.knockout-editor .alert-success { background:#edf8f1; border:1px solid #d7eadf; color:#357553; }
+.knockout-editor .alert-warning { background:#fff8e9; border:1px solid #efe4c8; color:#8b6b27; }
+.knockout-editor code { background:#f0f3f8; color:#64758e; padding:2px 5px; border-radius:4px; font-size:11px; }
+.knockout-editor .table { min-width:650px; font-size:12px; color:#263b59; }
+.knockout-editor .table th { padding:13px 16px; border-top:0; background:#f5f8fc; color:#64758e; font-size:11px; font-weight:600; }
+.knockout-editor .table td { padding:12px 16px; vertical-align:top; border-color:#edf1f7; }
+.knockout-editor button:focus-visible, .knockout-editor a:focus-visible { outline:2px solid #5284ce; outline-offset:3px; }
+@media(max-width:767px) { .knockout-editor { padding-left:0!important; padding-right:0!important; } .knockout-editor .card-body { padding:16px; } .knockout-editor h4 { font-size:26px; } }
+}

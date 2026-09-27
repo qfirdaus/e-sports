@@ -1,0 +1,6 @@
+@import url("style-primary.css");
+
+/* Gray theme overrides */
+.bg-primary { background-color: #6c757d !important; }
+.text-primary { color: #6c757d !important; }
+.btn-primary, .btn-primary:hover, .btn-primary:focus { background-color: #6c757d !important; border-color: #6c757d !important; }

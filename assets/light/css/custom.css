@@ -1,0 +1,81 @@
+/* Light theme overrides for e-sports */
+
+/* Sports icons in header */
+.header-sukan-logos{display:flex;gap:.5rem;align-items:center;padding-right:8px}
+.header-sukan-logos img{width:48px;height:48px;object-fit:contain;border-radius:6px;border:1px solid rgba(0,0,0,0.06);background:#fff}
+
+@media (max-width:767px){
+	.header-sukan-logos img{width:36px;height:36px}
+}
+
+/* Theme swatches */
+.theme-swatch{width:28px;height:28px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,0.06);cursor:pointer;padding:0}
+.theme-swatch:focus{outline:2px solid rgba(0,0,0,0.12)}
+.theme-swatch[aria-pressed="true"]{box-shadow:0 0 0 2px rgba(0,0,0,0.12) inset}
+
+@media (max-width:767px){
+	.theme-swatch{width:22px;height:22px}
+}
+
+/* Header action avatar (translation/setting icons) - match main avatar sizing */
+.header-action-avatar img{width:48px;height:48px;object-fit:cover;border-radius:50%;border:1px solid rgba(0,0,0,0.06);background:#fff}
+@media (max-width:767px){
+    .header-action-avatar img{width:36px;height:36px}
+}
+
+/* smaller locale icon (language toggle) */
+
+/* Ensure user avatar in header matches locale/action icon sizing */
+.header-notification-area .avatar img,
+.header-notification-area .avatar img[alt],
+.header-notification-area img.header-locale-img {
+	width:48px !important;
+	height:48px !important;
+	object-fit:cover !important;
+	border-radius:50% !important;
+	border:1px solid rgba(0,0,0,0.06) !important;
+	background:#fff !important;
+}
+@media (max-width:767px){
+	.header-notification-area .avatar img,
+	.header-notification-area img.header-locale-img {
+		width:36px !important;
+		height:36px !important;
+	}
+}
+
+/* header-locale-img and overlay styles removed (selection UI disabled) */
+
+/* Enforce sticky footer layout as a robust fallback */
+html, body {
+	height: 100%;
+}
+.main-wrapper {
+	display: flex !important;
+	flex-direction: column !important;
+	min-height: 100vh !important;
+}
+.content-body {
+	flex: 1 1 auto !important;
+}
+.footer-section {
+	margin-top: auto !important;
+}
+
+/* When JS determines content is shorter than viewport, pin footer */
+/* When JS pins the footer, it will set inline left/width to match content.
+   Avoid forcing full-viewport width here to prevent overlapping the sidebar. */
+body.sticky-footer-fixed .footer-section {
+	position: fixed !important;
+	bottom: 0; z-index: 9999;
+	left: auto !important; right: auto !important; width: auto !important;
+}
+/* JS will set exact padding-bottom on the content-body to match footer height. */
+body.sticky-footer-fixed .content-body { padding-bottom: 0; }
+
+/* Hide footer on all pages as requested */
+.footer-section {
+	display: none !important;
+}
+.content-body { padding-bottom: 0 !important; }
+

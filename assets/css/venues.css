@@ -1,0 +1,27 @@
+/* Venue-specific additions to the shared management layout. */
+@media screen {
+.venues-view #venuesSearch { min-height:39px; border:1px solid #dce4f0; border-radius:0 8px 8px 0; font-size:12px; background:#fff; }
+.venues-view #venuesPageSizeTopSelect { min-height:39px; border:1px solid #dce4f0; border-radius:8px; color:#526d93; background-color:#fff; font-size:12px; }
+.venues-view .table { min-width:850px; }
+.venues-view .table th:nth-child(4) { text-align:center; }
+.venues-view .table td:nth-child(4) { color:#31598e; font-variant-numeric:tabular-nums; }
+.venues-view .table td:nth-child(2) { color:#193961; font-weight:500; }
+.venues-view .table .badge.bg-secondary { background:#eef0f4!important; color:#6a7689; border-radius:20px; }
+.venues-view .management-stats > div:nth-child(2) .h5 { color:#193961; }
+.venues-view #venuesPagingInfo { font-size:11px; color:#7a889d!important; }
+.venues-view #venuesPagination { padding-top:8px; }
+.venues-view #venuesPagination .pagination { gap:6px; flex-wrap:wrap; }
+.venues-view #venuesPagination .page-link { border:1px solid #dce4f0; border-radius:8px; padding:8px 12px; color:#526d93; font-size:12px; box-shadow:none; }
+.venues-view #venuesPagination .active .page-link { color:#fff; background:#183b68; border-color:#183b68; }
+.venues-view #venuesPagination .disabled .page-link { color:#a0adbe; background:#f8fafd; }
+#addVenueModal .modal-content { border:1px solid #e3eaf3; border-radius:14px; }
+#addVenueModal .modal-header { background:#f8fafd; border-bottom:1px solid #e8edf5; padding:20px; }
+#addVenueModal .modal-title { color:#193961; font-size:18px; font-weight:600; }
+#addVenueModal .form-control, #addVenueModal .form-select { border-color:#dce4f0; border-radius:8px; font-size:13px; }
+#addVenueModal .btn { border-radius:8px; }
+@media(max-width:575px) {
+.venues-view .card-header > .d-flex { gap:8px; flex-wrap:wrap; }
+.venues-view .card-header .input-group { min-width:0!important; flex:1 1 180px; width:auto; }
+.venues-view #venuesPageSizeTopSelect { margin-left:0!important; }
+}
+}

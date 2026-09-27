@@ -1,0 +1,6 @@
+@import url("style-primary.css");
+
+/* Teal theme overrides */
+.bg-primary { background-color: #20c997 !important; }
+.text-primary { color: #20c997 !important; }
+.btn-primary, .btn-primary:hover, .btn-primary:focus { background-color: #20c997 !important; border-color: #20c997 !important; }

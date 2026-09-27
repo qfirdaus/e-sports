@@ -1,0 +1,1272 @@
+/**
+ * Custom CSS for CoreUI Template
+ * Top Navbar Layout
+ */
+
+/* Remove sidebar-related styles */
+.wrapper {
+    margin-left: 0 !important;
+}
+
+.body {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+/* Top Navbar Styling */
+.navbar-brand {
+    font-size: 1.25rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    margin: 8px 0 8px 12px;
+}
+
+.navbar-logo {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+    padding: 4px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    margin-right: 8px;
+}
+
+.navbar-logo:hover {
+    opacity: 0.8;
+}
+
+/* Footer Logo */
+.footer-logo {
+    height: 24px;
+    width: auto;
+    object-fit: contain;
+    vertical-align: middle;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer > div {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.9rem;
+    transition: all 0.3s ease;
+}
+
+/* Right menu spacing & polish */
+.navbar-nav {
+    gap: 6px;
+}
+
+/* User profile menu spacing */
+.navbar-nav .nav-item.dropdown {
+    margin-left: 10px;
+}
+
+.navbar-nav .nav-link {
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+.navbar-nav .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0.375rem;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 0.375rem;
+}
+
+.navbar-nav .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.navbar .dropdown-menu {
+    margin-top: 8px;
+}
+
+/* Icon styling for navigation */
+.navbar-nav .nav-link .icon,
+.navbar-nav .nav-link .nav-icon {
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.navbar-nav .nav-link .nav-icon {
+    width: 18px;
+    text-align: center;
+}
+
+.navbar-nav .nav-link .icon.icon-lg {
+    font-size: 1.25rem;
+}
+
+/* Icon styling for dropdown */
+.dropdown-item .icon {
+    width: 16px;
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+/* Event Banner Styling */
+.event-banner {
+    position: relative;
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    overflow: visible;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.event-banner:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.event-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 0.375rem;
+}
+
+.event-banner-image {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Ensure banner container is visible by default */
+#eventBannerContainer {
+    display: block !important;
+}
+
+/* Only hide if explicitly set by JavaScript */
+#eventBannerContainer[style*="display: none"] {
+    display: none !important;
+}
+
+.event-banner-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+    z-index: 10;
+    border: none;
+    padding: 0;
+}
+
+.event-banner-close:hover {
+    opacity: 1;
+    background: rgba(255, 255, 255, 1) !important;
+    transform: scale(1.1);
+}
+
+.event-banner-close:focus {
+    box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.25);
+}
+
+/* Custom card styling */
+.card {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white for subtle effect */
+    backdrop-filter: blur(2px); /* Subtle blur for modern glass effect */
+}
+
+.card-header {
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    font-weight: 600;
+}
+
+/* Full width layout */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Global Background Image - Subtle and Non-Distracting */
+body {
+    position: relative;
+    background-color: #f8f9fa; /* Fallback color */
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: none;
+    opacity: 0;
+    z-index: 0;
+    pointer-events: none;
+    display: none;
+}
+
+/* Ensure all content is above the background */
+.wrapper {
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+}
+
+/* Add subtle overlay to content areas for better readability */
+.body {
+    position: relative;
+    z-index: 1;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove any max-width constraints */
+.container-fluid {
+    max-width: 100% !important;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Navbar full width */
+.navbar {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Header layout: full width, no outer spacing */
+.header,
+.header-sticky,
+.navbar {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.header .w-100,
+.navbar .w-100,
+.header .px-3,
+.navbar .px-3 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.header,
+.header-sticky {
+    top: 0 !important;
+}
+
+/* Footer full width and fixed at bottom */
+.footer {
+    width: 100%;
+    max-width: 100%;
+    background-color: #fff;
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+    padding: 1rem 1.5rem;
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1020;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Add padding to content wrapper to prevent content from being hidden behind fixed footer */
+.content-wrapper {
+    padding-bottom: 80px; /* Space for fixed footer */
+}
+
+/* Ensure footer content is properly aligned */
+.footer > div {
+    display: flex;
+    align-items: center;
+}
+
+/* Responsive footer */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 0.75rem 1rem;
+    }
+    
+    .footer > div {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 0.5rem;
+    }
+    
+    .footer > div:last-child {
+        margin-bottom: 0;
+    }
+    
+    .content-wrapper {
+        padding-bottom: 100px; /* More space on mobile for taller footer */
+    }
+    
+    .navbar-logo {
+        height: 32px;
+    }
+    
+    .navbar-brand span {
+        font-size: 1rem;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .navbar-nav {
+        margin-top: 1rem;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 0.75rem 1rem;
+    }
+    
+    .px-3 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    
+    .event-banner {
+        margin-bottom: 1rem;
+        border-radius: 0.375rem;
+        padding: 0.375rem;
+    }
+    
+    .event-banner img {
+        max-height: 350px;
+    }
+    
+    .event-banner-close {
+        top: 10px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .event-banner {
+        padding: 0.25rem;
+    }
+    
+    .event-banner img {
+        max-height: 250px;
+    }
+    
+    .event-banner-close {
+        top: 8px;
+        right: 8px;
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 400px) {
+    .event-banner img {
+        max-height: 200px;
+    }
+}
+
+/* Custom avatar styling */
+.avatar {
+    width: 2rem;
+    height: 2rem;
+}
+
+.avatar-sm {
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Header sticky positioning - Must be below modal */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000 !important; /* Below modal (1050) - Standard Bootstrap navbar z-index */
+}
+
+/* CRITICAL: Ensure header never appears above modal - Multiple selectors for maximum coverage */
+.header,
+.header-sticky,
+body.modal-open .header,
+body.modal-open .header-sticky,
+body.modal-open .navbar,
+.modal.show ~ .header,
+.modal.show ~ .header-sticky,
+.modal.show ~ .navbar {
+    z-index: 1000 !important; /* Force below modal (1050) */
+}
+
+/* Breadcrumb styling */
+.header nav[aria-label="breadcrumb"] {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 16px;
+}
+
+.header .breadcrumb {
+    margin: 4px 0;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.header .breadcrumb .breadcrumb-item,
+.header .breadcrumb .breadcrumb-item a {
+    color: #6c757d;
+    text-decoration: none;
+}
+
+.header .breadcrumb .breadcrumb-item.active {
+    color: #212529;
+}
+
+/* Table responsive improvements */
+.table-responsive {
+    border-radius: 0.375rem;
+}
+
+/* Form improvements */
+.form-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+/* Button spacing */
+.btn + .btn {
+    margin-left: 0.5rem;
+}
+
+/* ============================================
+   DROPDOWN MENU (Bootstrap/CoreUI Standard)
+   ============================================
+   Standard Bootstrap z-index hierarchy:
+   - Navbar: 1000
+   - Dropdown: 1000 (same level, positioned absolutely)
+   - Modal backdrop: 1040
+   - Modal: 1050
+   - Tooltips/Popovers: 1070
+   ============================================ */
+
+/* Dropdown menu - Standard Bootstrap positioning */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000; /* Standard Bootstrap value - same as navbar */
+    display: none;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.375rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Dropdown menu when shown */
+.dropdown-menu.show {
+    display: block;
+    z-index: 1000;
+}
+
+/* Dropdown menu end alignment (right-aligned) */
+.dropdown-menu.dropdown-menu-end {
+    right: 0;
+    left: auto;
+}
+
+/* Dropdown item - Standard Bootstrap styling */
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    color: #1e2125;
+    background-color: #e9ecef;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    color: #fff;
+    background-color: #0d6efd;
+}
+
+/* Dropdown toggle - Standard Bootstrap */
+.nav-link.dropdown-toggle {
+    cursor: pointer;
+}
+
+/* Dropdown container - Standard Bootstrap */
+.nav-item.dropdown {
+    position: relative; /* Required for absolute positioning of dropdown menu */
+}
+
+/* Registration Form Modal Styles */
+.modal-dialog-scrollable .modal-body {
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+}
+
+.registration-step {
+    min-height: 300px;
+}
+
+.review-section .card {
+    border-left: 3px solid #0d6efd;
+}
+
+.review-section .card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Form validation styles */
+.form-control.is-valid,
+.form-select.is-valid {
+    border-color: #198754;
+    padding-right: calc(1.5em + 0.75rem);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='m2.3 6.73.98-.98-.98-.98-.98.98.98.98zm1.4-3.46L3.3 2.27l-.98.98L2.3 3.25l.98.98z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+.form-control.is-invalid,
+.form-select.is-invalid {
+    border-color: #dc3545;
+    padding-right: calc(1.5em + 0.75rem);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath d='m5.8 3.6.4.4.4-.4m0 4.8-.4-.4-.4.4'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+.form-check-input.is-invalid {
+    border-color: #dc3545;
+}
+
+/* Progress bar styling */
+.progress {
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.progress-bar {
+    transition: width 0.3s ease;
+}
+
+/* Modal responsive adjustments */
+@media (max-width: 768px) {
+    .modal-dialog {
+        margin: 0.5rem;
+    }
+    
+    .registration-step {
+        min-height: auto;
+    }
+}
+
+/* Background image responsive adjustments */
+@media (max-width: 768px) {
+    body::before {
+        background-attachment: scroll; /* Better performance on mobile */
+        background-size: contain !important; /* Show full image on mobile too */
+        background-position: center center !important; /* Centered on mobile */
+        opacity: 0.15; /* Visibility on mobile */
+        filter: blur(1px); /* Slightly more blur on mobile */
+    }
+}
+
+/* ============================================
+   MODAL Z-INDEX HIERARCHY (Bootstrap Standard)
+   ============================================
+   Z-index hierarchy (adjusted for safety):
+   - Navbar/Dropdown/Header: 1000 (MUST be below modal)
+   - Modal backdrop: 1040 (below modal)
+   - Modal container: 1060 (MUST be above navbar/header)
+   
+   Note: Modal-dialog and modal-content do NOT need z-index
+   as they inherit from the modal container's stacking context.
+   ============================================ */
+
+/* Modal Container - MUST be above navbar (increased z-index for safety) */
+.modal {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    display: none; /* Keep hidden unless explicitly shown */
+    z-index: 1060 !important; /* INCREASED: Must be above navbar (1000) and backdrop (1040) */
+    width: 100% !important;
+    height: 100% !important;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+    /* CRITICAL: Ensure modal creates its own stacking context above everything */
+    isolation: isolate;
+    /* CRITICAL: Ensure modal is rendered at body level (not nested) */
+    /* This is handled by JavaScript, but CSS ensures it works even if nested */
+}
+
+.modal.show {
+    display: block !important;
+    z-index: 1060 !important; /* INCREASED: Ensure modal is always above navbar */
+    position: fixed !important;
+}
+
+/* CRITICAL: Force modal above header/navbar in ALL scenarios - Multiple selectors */
+.modal,
+.modal.show,
+.modal.fade,
+.modal.fade.show,
+body.modal-open .modal,
+body.modal-open .modal.show,
+body.modal-open .modal.fade,
+body.modal-open .modal.fade.show,
+.modal:not([style*="display: none"]) {
+    z-index: 1060 !important;
+    position: fixed !important;
+}
+
+.modal.fade {
+    transition: opacity 0.15s linear;
+}
+
+.modal.fade:not(.show) {
+    opacity: 0;
+}
+
+/* Modal Dialog - Standard Bootstrap (no z-index needed) */
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 1.75rem auto;
+    pointer-events: none;
+    max-width: 500px;
+}
+
+.modal-dialog.modal-lg {
+    max-width: 800px;
+}
+
+.modal-dialog.modal-xl {
+    max-width: 1140px;
+}
+
+/* Modal Content - Standard Bootstrap (no z-index needed) */
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    outline: 0;
+}
+
+/* Modal Backdrop - Standard Bootstrap z-index: 1040 */
+.modal-backdrop {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 1040 !important; /* Below modal (1060) and navbar (1000) */
+    width: 100vw !important;
+    height: 100vh !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    pointer-events: auto;
+}
+
+.modal-backdrop.fade {
+    opacity: 0;
+    transition: opacity 0.15s linear;
+}
+
+.modal-backdrop.show {
+    opacity: 0.5;
+}
+
+/* Ensure only ONE backdrop exists - Remove duplicates */
+.modal-backdrop:not(:first-of-type) {
+    display: none !important;
+}
+
+/* Ensure backdrop is removed when modal is hidden */
+body:not(.modal-open) .modal-backdrop {
+    display: none !important;
+}
+
+.modal-backdrop:not(.show) {
+    display: none !important;
+    opacity: 0 !important;
+}
+
+.modal-backdrop.fade {
+    opacity: 0;
+    transition: opacity 0.15s linear;
+}
+
+.modal-backdrop.show {
+    opacity: 0.5;
+}
+
+/* Ensure backdrop is removed when modal is hidden */
+body:not(.modal-open) .modal-backdrop {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+/* Clean up lingering backdrops */
+.modal-backdrop:not(.show) {
+    display: none !important;
+    opacity: 0 !important;
+}
+
+/* Ensure modal dialog allows pointer events when shown */
+.modal.show .modal-dialog {
+    pointer-events: auto;
+}
+
+/* Ensure modal content and all interactive elements are clickable */
+.modal.show .modal-content,
+.modal.show .modal-content * {
+    pointer-events: auto;
+}
+
+/* Ensure modal header, body, footer are properly styled */
+.modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: calc(0.5rem - 1px);
+    border-top-right-radius: calc(0.5rem - 1px);
+}
+
+.modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem;
+}
+
+.modal-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0.75rem;
+    border-top: 1px solid #dee2e6;
+    border-bottom-right-radius: calc(0.5rem - 1px);
+    border-bottom-left-radius: calc(0.5rem - 1px);
+}
+
+/* Navbar - MUST be below modal - AGGRESSIVE enforcement */
+.navbar {
+    background-color: #212529 !important; /* Dark navbar */
+    position: relative !important;
+    z-index: 1000 !important; /* Below modal (1060) - Standard Bootstrap navbar z-index */
+}
+
+/* CRITICAL: Force navbar below modal in ALL scenarios */
+.navbar,
+body.modal-open .navbar,
+.modal.show ~ .navbar,
+.modal ~ .navbar,
+body:has(.modal.show) .navbar,
+body:has(.modal) .navbar {
+    z-index: 1000 !important; /* Force below modal (1060) */
+}
+
+/* Header sticky - MUST be below modal - AGGRESSIVE enforcement */
+.header-sticky {
+    position: sticky !important;
+    top: 0;
+    z-index: 1000 !important; /* Below modal (1060) - Standard Bootstrap navbar z-index */
+}
+
+/* CRITICAL: Force header below modal in ALL scenarios */
+.header,
+.header-sticky,
+body.modal-open .header,
+body.modal-open .header-sticky,
+.modal.show ~ .header,
+.modal.show ~ .header-sticky,
+.modal ~ .header,
+.modal ~ .header-sticky,
+body:has(.modal.show) .header,
+body:has(.modal.show) .header-sticky,
+body:has(.modal) .header,
+body:has(.modal) .header-sticky {
+    z-index: 1000 !important; /* Force below modal (1060) */
+}
+
+/* CRITICAL: Ensure navbar and header never appear above modal */
+body.modal-open .navbar,
+body.modal-open .header,
+body.modal-open .header-sticky {
+    z-index: 1000 !important; /* Force below modal (1050) */
+}
+
+/* Ensure footer has solid background */
+.footer {
+    background-color: #fff;
+    position: relative;
+    z-index: 1000; /* Above background */
+}
+
+/* Ensure fixed footer stays pinned at bottom */
+.footer.footer-fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1020;
+}
+
+/* Add subtle background to main content wrapper for better readability */
+.content-wrapper {
+    background-color: rgba(255, 255, 255, 0.2); /* Very subtle white overlay */
+    min-height: calc(100vh - 200px); /* Adjust based on header/footer height */
+}
+
+/* Ensure table backgrounds are readable */
+.table {
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.table thead {
+    background-color: rgba(248, 249, 250, 0.95);
+}
+
+/* Ensure form controls have readable backgrounds */
+.form-control,
+.form-select {
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+/* Ensure alert boxes are readable */
+.alert {
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(2px);
+}
+
+/* Loading Overlay Styles */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    z-index: 1030 !important; /* MUST be lower than modal backdrop (1040) and modal (1050) */
+    display: none !important; /* Hidden by default - shown by JS only when needed */
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* Allow clicks to pass through when hidden */
+}
+
+/* CRITICAL: Hide loading overlay when ANY modal is open - AGGRESSIVE */
+body.modal-open .loading-overlay,
+body.modal-open #loadingOverlay,
+.modal.show ~ .loading-overlay,
+.modal.show ~ #loadingOverlay,
+.modal.show + .loading-overlay,
+.modal.show + #loadingOverlay,
+.modal:not([style*="display: none"]) ~ .loading-overlay,
+.modal:not([style*="display: none"]) ~ #loadingOverlay,
+.modal:not([style*="display: none"]) + .loading-overlay,
+.modal:not([style*="display: none"]) + #loadingOverlay,
+body:has(.modal.show) .loading-overlay,
+body:has(.modal.show) #loadingOverlay,
+body:has(.modal-backdrop) .loading-overlay,
+body:has(.modal-backdrop) #loadingOverlay {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    z-index: -1 !important; /* Force it behind everything when modal is open */
+    position: fixed !important;
+    top: -9999px !important;
+    left: -9999px !important;
+}
+
+/* Also hide when modal-backdrop exists - AGGRESSIVE */
+body:has(.modal-backdrop.show) .loading-overlay,
+body:has(.modal-backdrop.show) #loadingOverlay,
+body:has(.modal-backdrop) .loading-overlay,
+body:has(.modal-backdrop) #loadingOverlay,
+.modal-backdrop.show ~ .loading-overlay,
+.modal-backdrop.show ~ #loadingOverlay,
+.modal-backdrop ~ .loading-overlay,
+.modal-backdrop ~ #loadingOverlay {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    z-index: -1 !important;
+    position: fixed !important;
+    top: -9999px !important;
+    left: -9999px !important;
+}
+
+.loading-overlay.show {
+    display: flex !important;
+    animation: fadeIn 0.3s ease;
+    pointer-events: auto; /* Allow interaction when shown */
+    z-index: 1030 !important; /* Only when actively showing */
+}
+
+/* CRITICAL: Even when showing, hide if modal is open */
+body.modal-open .loading-overlay.show,
+.modal.show ~ .loading-overlay.show,
+body:has(.modal.show) .loading-overlay.show {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    z-index: -1 !important;
+}
+
+.loading-overlay.hide {
+    animation: fadeOut 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loading-spinner {
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+
+.loading-spinner .spinner-border {
+    border-width: 0.3rem;
+    animation: spin 1s linear infinite;
+    width: 3rem;
+    height: 3rem;
+}
+
+.loading-spinner p {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.loading-spinner small {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Page transition loading */
+body.page-loading {
+    overflow: hidden;
+}
+
+body.page-loading .loading-overlay {
+    display: flex;
+}
+
+/* Toast Container Styles - Custom Implementation */
+.toast-container-custom {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    pointer-events: none;
+}
+
+.toast-custom {
+    min-width: 300px;
+    max-width: 400px;
+    background-color: #17a2b8;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 0;
+    opacity: 0;
+    transform: translateX(400px);
+    transition: all 0.3s ease;
+    pointer-events: auto;
+}
+
+.toast-custom-show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.toast-custom-hide {
+    opacity: 0;
+    transform: translateX(400px);
+}
+
+.toast-custom-content {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    gap: 12px;
+}
+
+.toast-custom-icon {
+    font-size: 20px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.toast-custom-message {
+    flex: 1;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.toast-custom-close {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 4px 8px;
+    font-size: 18px;
+    line-height: 1;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toast-custom-close:hover {
+    opacity: 1;
+}
+
+/* Toast type colors */
+.toast-custom-success {
+    background-color: #28a745 !important;
+}
+
+.toast-custom-error {
+    background-color: #dc3545 !important;
+}
+
+.toast-custom-warning {
+    background-color: #ffc107 !important;
+    color: #212529 !important;
+}
+
+.toast-custom-warning .toast-custom-close {
+    color: #212529 !important;
+}
+
+.toast-custom-info {
+    background-color: #17a2b8 !important;
+}
+
+.toast-custom-primary {
+    background-color: #007bff !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .toast-container-custom {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+    }
+    
+    .toast-custom {
+        min-width: auto;
+        max-width: 100%;
+    }
+    
+    .toast-custom {
+        transform: translateY(-100px);
+    }
+    
+    .toast-custom-show {
+        transform: translateY(0);
+    }
+    
+    .toast-custom-hide {
+        transform: translateY(-100px);
+    }
+}
+
+/* Background image responsive adjustments - duplicate removed */
+
+/* Ensure navbar has solid background */
+.navbar {
+    background-color: #212529 !important; /* Dark navbar */
+}
+
+/* Ensure footer has solid background */
+.footer {
+    background-color: #fff;
+}
+
+/* Add subtle background to main content wrapper for better readability */
+.content-wrapper {
+    background-color: rgba(255, 255, 255, 0.3); /* Very subtle white overlay */
+    min-height: calc(100vh - 200px); /* Adjust based on header/footer height */
+}
+
+/* ============================================
+   TAB PANE VISIBILITY (Settings Page)
+   ============================================
+   Ensure tab-panes are visible when they should be
+   ============================================ */
+
+/* Tab pane should be visible when it has .show class */
+.tab-pane.fade.show {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Tab pane should be hidden when it doesn't have .show class (Bootstrap default) */
+.tab-pane.fade:not(.show) {
+    display: none !important;
+    opacity: 0;
+}
+
+/* Ensure tab content container is always visible */
+.tab-content {
+    display: block !important;
+    visibility: visible !important;
+}
+
+/* Prevent tab-panes from being accidentally moved or hidden */
+.tab-pane {
+    position: relative !important;
+    /* Ensure tab-panes are NOT moved to body (they should stay in their container) */
+}
+
+/* Ensure display and system tabs are visible when active */
+#display.tab-pane.fade.show,
+#system.tab-pane.fade.show {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: relative !important;
+}

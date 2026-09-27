@@ -1,0 +1,33 @@
+@media screen {
+.schedule-setup { color:#263b59; }
+.schedule-eyebrow { font-size:10px; font-weight:700; letter-spacing:1.7px; color:#62748e; margin-bottom:10px; }
+.schedule-setup h2 { font-size:30px; color:#142b50; font-weight:700; letter-spacing:-.7px; }
+.schedule-setup h2 + p { font-size:13px; color:#758298!important; margin-top:8px; }
+.schedule-setup .card { border:1px solid #e3eaf3; border-radius:14px; box-shadow:0 4px 22px rgba(20,43,80,.04); }
+.schedule-setup > .card { background:#f8fafd; margin-bottom:22px!important; box-shadow:none; }
+.schedule-setup .card-body { padding:20px; }
+.schedule-setup .card-header { padding:17px 20px; background:#fff; color:#193961; font-size:15px; font-weight:600; border-bottom:1px solid #e8edf5; border-radius:14px 14px 0 0; }
+.schedule-setup .form-label { font-size:12px; font-weight:500; color:#526580; margin-bottom:7px; }
+.schedule-setup .form-control, .schedule-setup .form-select { min-height:42px; border:1px solid #dce4f0; border-radius:8px; font-size:13px; background-color:#fff; color:#263b59; }
+.schedule-setup .form-select:disabled, .schedule-setup .form-control:disabled { background:#eef2f7; color:#98a3b3; }
+.schedule-setup .form-control:focus, .schedule-setup .form-select:focus { border-color:#5284ce; box-shadow:0 0 0 3px rgba(37,99,197,.1); }
+.schedule-setup .form-check-inline { margin:0 8px 6px 0; padding:10px 12px 10px 32px; border:1px solid #dce4f0; border-radius:8px; background:#fff; }
+.schedule-setup .form-check-inline:has(input:checked) { border-color:#a9c3e9; background:#eaf1fc; color:#254875; }
+.schedule-setup .form-check-label { font-size:12px; }
+.schedule-setup .btn { border-radius:8px; padding:9px 14px; font-size:12px; min-height:38px; }
+.schedule-setup .btn-primary, .schedule-setup #sj-add-btn { background:#2563c5; border-color:#2563c5; color:#fff; }
+.schedule-setup #manual-table { border:1px solid #e8edf5; border-radius:10px; margin-top:14px; }
+.schedule-setup .table { min-width:940px; margin:0; color:#263b59; font-size:12px; }
+.schedule-setup .table th { background:#f5f8fc; color:#64758e; padding:13px 12px; border-top:0; font-size:11px; font-weight:600; white-space:nowrap; }
+.schedule-setup .table td { padding:13px 12px; border-color:#edf1f7; line-height:1.7; vertical-align:top; }
+.schedule-setup .table tbody tr:nth-child(even) { background:#fafbfd; }
+.schedule-setup .table .btn { min-width:32px; min-height:32px; padding:6px 9px; }
+.schedule-setup .schedule-empty { text-align:center; padding:36px 16px!important; color:#8794a7!important; }
+.schedule-setup #sj-groups { overflow-x:auto; }
+.schedule-setup .modal-content { border:1px solid #e3eaf3; border-radius:14px; }
+.schedule-setup .modal-header { background:#f8fafd; padding:20px; border-bottom:1px solid #e8edf5; }
+.schedule-setup .modal-title { color:#193961; font-size:18px; font-weight:600; }
+.schedule-setup .form-text { font-size:11px; color:#8794a7; }
+.schedule-setup button:focus-visible, .schedule-setup input[type="radio"]:focus-visible { outline:2px solid #5284ce; outline-offset:3px; }
+@media(max-width:767px) { .schedule-setup { padding-left:0!important; padding-right:0!important; } .schedule-setup .card-body { padding:16px; } .schedule-setup h2 { font-size:26px; } }
+}

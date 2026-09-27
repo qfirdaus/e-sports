@@ -1,0 +1,87 @@
+/* Screen layout only: certificate print documents use their own styles. */
+@media screen {
+.certificate-view { color:#263b59; }
+.certificate-eyebrow { color:#62748e; font-size:10px; font-weight:700; letter-spacing:1.7px; margin-bottom:10px; }
+.certificate-view h2 { color:#142b50; font-size:30px; font-weight:700; letter-spacing:-.7px; }
+.certificate-view > .row:first-of-type { margin-bottom:26px!important; }
+.certificate-view > .row:first-of-type p { font-size:13px; margin-top:8px; color:#758298!important; }
+#tabsWrap { border:1px solid #e3eaf3; border-radius:16px; background:#fff; box-shadow:0 4px 22px rgba(20,43,80,.045); }
+#tabsWrap > .d-flex { padding:16px 20px; gap:16px; align-items:center!important; flex-wrap:wrap; border-bottom:1px solid #e8edf5; background:#fafbfd; border-radius:16px 16px 0 0; }
+#sijilTabs { gap:6px; border:0; flex-wrap:wrap; }
+#sijilTabs .nav-link { display:inline-flex; align-items:center; gap:8px; border:0; border-radius:9px; background:transparent; color:#65748b; padding:11px 15px; font-size:13px; font-weight:600; margin:0; }
+#sijilTabs .nav-link.active { background:#183b68; color:#fff; box-shadow:0 3px 8px rgba(24,59,104,.12); }
+#sijilTabs .nav-link:not(.active):hover { background:#eaf0f9; color:#183b68; }
+#sijilTabs .sijil-tab-icon { margin:0; font-size:14px; }
+#tabsWrap #btnAddMember { background:#2563c5; border-color:#2563c5; padding:10px 16px; border-radius:9px; font-size:12px; white-space:nowrap; }
+#sijilTabContent { border:0!important; padding:22px!important; }
+#sijilTabContent .tab-pane > .card { border:1px solid #e5ebf4; border-radius:12px; background:#f8fafd; box-shadow:none; margin-bottom:20px!important; }
+#sijilTabContent .card-body { padding:16px 18px; }
+.certificate-filter-label { display:block; font-size:11px; color:#65748b; font-weight:600; margin-bottom:8px; }
+#sijilTabContent .form-select, #sijilTabContent .form-control { min-height:39px; height:auto; border:1px solid #dce4f0; border-radius:8px; background-color:#fff; color:#263b59; font-size:12px; box-shadow:none; }
+#sijilTabContent .form-control:focus, #sijilTabContent .form-select:focus { border-color:#5284ce; box-shadow:0 0 0 3px rgba(37,99,197,.1); }
+#sijilTabContent .btn { border-radius:8px; font-size:12px; font-weight:500; min-height:34px; }
+#sijilTabContent [id^="btnLoad"] { min-height:39px; background:#e9eff8; color:#254875; border:1px solid #d8e3f2; }
+#kontinjenSubNav { gap:6px; padding:0 0 15px; margin-bottom:18px!important; border-bottom:1px solid #e8edf5; }
+#kontinjenSubNav .nav-link { display:inline-flex; align-items:center; gap:6px; border-radius:8px; padding:10px 13px; font-size:12px; font-weight:500; color:#61728b; background:#f6f8fc; }
+#kontinjenSubNav .nav-link.active { color:#1e4e91; background:#eaf1fc; box-shadow:inset 0 0 0 1px #cbddf7; }
+#kontinjenSubNav .badge { background:#e0e8f5!important; color:#31547d!important; border:0!important; border-radius:5px; padding:4px 6px; font-size:10px; }
+#sijilTabContent [id^="printAll"] { min-height:39px; white-space:nowrap; padding:8px 14px; background:#2563c5; border-color:#2563c5; }
+#sijilTabContent .table-responsive { border:1px solid #e8edf5; border-radius:10px; margin-top:14px; }
+#sijilTabContent .table { margin:0; font-size:12px; color:#263b59; }
+#sijilTabContent .table thead th { background:#f5f8fc; color:#64758e; font-size:11px; font-weight:600; padding:13px 14px; border-top:0; border-bottom:1px solid #e8edf5; white-space:nowrap; }
+#sijilTabContent .table td { padding:12px 14px; vertical-align:middle; border-color:#edf1f7; line-height:1.6; }
+#sijilTabContent .table tbody tr:hover { background:#f7faff; }
+#sijilTabContent .icon-action-btn { width:33px; height:33px; min-height:33px; border:1px solid #dbe5f4; background:#f1f5fc; color:#31598e; border-radius:8px; }
+#sijilTabContent .icon-action-btn:hover { background:#e0ebfb; border-color:#9dbce7; }
+#sijilTabContent [id$="PageInfo"] { color:#7a889d; font-size:11px; padding:0 5px; }
+#sijilTabContent .justify-content-end.mt-2 { padding-top:12px; }
+#tabsWrap button:focus-visible { outline:2px solid #2563c5; outline-offset:3px; }
+@media(max-width:767px) {
+.certificate-view { padding-left:0!important; padding-right:0!important; }
+#tabsWrap > .d-flex { padding:14px; gap:12px; }
+#tabsWrap > .d-flex > .ms-auto { padding-left:0!important; }
+#sijilTabs { width:100%; }
+#sijilTabs .nav-link { font-size:11px; padding:9px 10px; }
+#sijilTabContent { padding:14px!important; }
+#sijilTabContent .card-body > div, #frmKont { width:100%; }
+#frmKont > .d-flex, #sijilTabContent .card-body > div > .d-flex { flex-wrap:wrap; gap:8px; }
+#sijilTabContent .form-select { min-width:0!important; max-width:100%!important; width:100%; }
+#sijilTabContent [id^="btnLoad"] { margin-left:0!important; }
+#sijilTabContent .table { min-width:680px; }
+#kontinjenSubNav .nav-link { font-size:11px; padding:9px; }
+#sijilTabContent .tab-pane-inner > .d-flex.mb-2 { flex-wrap:wrap; gap:8px; }
+#sijilTabContent .tab-pane-inner > .d-flex.mb-2 > .me-auto { display:none; }
+}
+}
+
+/* Contingent certificate portal: reuse the certificate management design. */
+@media screen {
+.certificate-user-view .certificate-user-filter { border:1px solid #e3eaf3; border-radius:14px; background:#f8fafd; box-shadow:none; margin-bottom:20px!important; }
+.certificate-user-view .certificate-user-filter .card-body { padding:18px 20px; }
+.certificate-user-view .certificate-user-filter .card-body > div { width:100%; }
+.certificate-user-view #frmKont > .d-flex { gap:10px; flex-wrap:wrap; }
+.certificate-user-view #selectKont { min-width:0!important; max-width:100%!important; width:360px; height:40px; border:1px solid #dce4f0; border-radius:8px; font-size:12px; color:#263b59; background-color:#fff; }
+.certificate-user-view #selectKont:disabled { background-color:#edf2f8; opacity:1; }
+.certificate-user-view #btnLoadList { margin-left:0!important; min-height:40px; border-radius:8px; background:#183b68; border-color:#183b68; font-size:12px; }
+.certificate-user-view .certificate-list-heading { padding:20px 22px 12px; }
+.certificate-user-view .certificate-list-heading h3 { margin:0 0 6px; font-size:16px; font-weight:600; color:#142b50; }
+.certificate-user-view .certificate-list-heading p { margin:0; font-size:12px; color:#758298; }
+.certificate-user-view #sijilTabs { padding:0 22px 16px; border-bottom:1px solid #e8edf5; }
+.certificate-user-view #sijilTabs .nav-link { background:#f3f6fb; padding:10px 13px; font-size:12px; }
+.certificate-user-view #sijilTabs .nav-link.active { background:#183b68; }
+.certificate-user-view #sijilTabs .badge { background:#e0e8f5!important; color:#31547d; font-size:10px; min-width:22px; padding:4px 6px; border-radius:5px; }
+.certificate-user-view #sijilTabs .nav-link.active .badge { background:#ffffff26!important; color:#fff; }
+.certificate-user-view #sijilTabContent .table td { vertical-align:top; }
+.certificate-user-view #sijilTabContent .tab-pane > .d-flex.mb-2 { align-items:center; flex-wrap:wrap; gap:8px; }
+.certificate-user-view #sijilTabContent .btn-outline-primary { border-color:#dbe5f4; color:#31598e; background:#f1f5fc; }
+.certificate-user-view #sijilTabContent .btn-outline-primary:hover { background:#e0ebfb; }
+.certificate-user-view #selectKont:focus-visible, .certificate-user-view #btnLoadList:focus-visible { outline:2px solid #2563c5; outline-offset:3px; }
+@media(max-width:767px) {
+.certificate-user-view h2 { font-size:25px; }
+.certificate-user-view .certificate-list-heading { padding:16px 14px 12px; }
+.certificate-user-view #sijilTabs { padding:0 14px 14px; }
+.certificate-user-view #selectKont { width:100%; }
+.certificate-user-view #sijilTabContent .tab-pane > .d-flex.mb-2 > .me-auto { display:none; }
+.certificate-user-view #sijilTabContent input[type=search] { flex:1; min-width:140px; max-width:none!important; margin-right:0!important; }
+}
+}

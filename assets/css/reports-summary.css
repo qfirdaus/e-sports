@@ -1,0 +1,51 @@
+/* Scoped screen presentation; printed reports retain their existing layout. */
+@media screen {
+.reports-summary { color:#263b59; }
+.reports-eyebrow { font-size:10px; font-weight:700; letter-spacing:1.7px; color:#62748e; margin-bottom:10px; }
+.reports-summary h2 { font-size:30px; color:#142b50; font-weight:700; letter-spacing:-.7px; }
+.reports-summary > .row:first-of-type { margin-bottom:26px!important; }
+.reports-summary > .row:first-of-type p { font-size:13px; margin-top:8px; color:#758298!important; }
+.reports-summary > .card { border:1px solid #e3eaf3; border-radius:16px; box-shadow:0 4px 22px rgba(20,43,80,.045); overflow:hidden; }
+.reports-summary > .card > .card-body { padding:0; }
+.reports-summary .nav { padding:16px 20px; gap:8px; background:#fafbfd; border-bottom:1px solid #e8edf5; margin-bottom:0!important; }
+.reports-summary .nav-link { border:0; border-radius:9px; color:#65748b; background:transparent; font-size:13px; font-weight:600; padding:11px 16px; }
+.reports-summary .nav-link.active { background:#183b68; color:#fff; box-shadow:0 3px 8px rgba(24,59,104,.12); }
+.reports-summary .nav-link:not(.active):hover { color:#183b68; background:#eaf0f9; }
+.reports-summary .tab-content { padding:22px; }
+.reports-summary .table-responsive { border:1px solid #e8edf5; border-radius:10px; }
+.reports-summary .table { margin:0; font-size:12px; color:#263b59; }
+.reports-summary .table thead th { background:#f5f8fc; color:#64758e; font-size:11px; font-weight:600; padding:14px; border-top:0; border-bottom:1px solid #e8edf5; white-space:nowrap; }
+.reports-summary .table tbody td { padding:12px 14px; line-height:1.6; border-color:#edf1f7; vertical-align:middle; }
+.reports-summary .table tbody tr:nth-child(even) { background:#fafbfd; }
+.reports-summary .table tbody tr:hover { background:#edf4ff; }
+.reports-summary .table tbody td:first-child { color:#8795aa; font-size:11px; }
+.reports-summary .table .text-primary { color:#3265b2!important; }
+.reports-summary .table .text-danger { color:#a34c79!important; }
+.reports-summary .table .fw-bold { color:#193961; font-weight:700; }
+.reports-summary .table td, .reports-summary .table th { font-variant-numeric:tabular-nums; }
+.reports-summary .table tfoot th { padding:16px 14px; background:#edf3fb; border-top:2px solid #dce6f4; border-bottom:0; font-size:12px; color:#193961; }
+.reports-summary #pane-atlet .table tr > :nth-child(n+3) { text-align:right!important; }
+.reports-summary #pane-atlet .table tr > :last-child { background:rgba(37,99,197,.035); }
+.reports-summary .tab-pane > .d-flex { padding:16px; background:#f8fafd; border:1px solid #e5ebf4; border-radius:12px; flex-wrap:wrap; }
+.reports-summary h5 { font-size:15px; color:#1b3153; font-weight:700; }
+.reports-summary .tab-pane p { font-size:12px; margin-top:5px; }
+.reports-summary .form-select { min-height:39px; max-width:430px; font-size:12px; border:1px solid #dce4f0; border-radius:8px; color:#263b59; background-color:#fff; }
+.reports-summary .form-label { color:#65748b; font-size:11px; font-weight:600; }
+.reports-summary .btn { min-height:39px; border-radius:8px; padding:8px 15px; font-size:12px; white-space:nowrap; background:#2563c5; border-color:#2563c5; color:#fff; }
+.reports-summary .btn:hover { background:#1e509e; }
+.reports-summary button:focus-visible, .reports-summary select:focus-visible { outline:2px solid #5284ce; outline-offset:3px; }
+.reports-summary #statsSummary > div { flex:1 1 130px; border-radius:10px!important; padding:16px!important; background:#f8fafd!important; border-color:#e3eaf3!important; }
+.reports-summary #statsSummary .h5 { margin-top:6px; font-size:24px; color:#193961; font-weight:700; }
+.reports-summary #pane-statistik .card { border:1px solid #e3eaf3; border-radius:12px; box-shadow:none; }
+.reports-summary #statsChart { overflow-x:auto; }
+@media(max-width:767px) {
+.reports-summary { padding-left:0!important; padding-right:0!important; }
+.reports-summary .nav { padding:12px; gap:5px; }
+.reports-summary .nav-link { font-size:11px; padding:10px; }
+.reports-summary .tab-content { padding:12px; }
+.reports-summary .table { min-width:680px; }
+.reports-summary .tab-pane > .d-flex > .ms-auto { margin-left:0!important; width:100%; flex-wrap:wrap; }
+.reports-summary .form-select { max-width:100%; width:100%; }
+.reports-summary .tab-pane > .d-flex > .ms-auto > div:first-child { flex:1; min-width:0; }
+}
+}

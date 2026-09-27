@@ -1,0 +1,35 @@
+@media screen {
+.standings-view { color:#263b59; }
+.standings-eyebrow { color:#62748e; font-size:10px; font-weight:700; letter-spacing:1.7px; margin-bottom:10px; }
+.standings-view h4 { color:#142b50; font-size:30px; font-weight:700; letter-spacing:-.7px; }
+.standings-view h4 + p { font-size:13px; margin-top:8px; color:#758298!important; }
+.standings-view > .row:first-child .card { box-shadow:none!important; background:transparent; }
+.standings-view > .row:first-child .card-body { padding:0; }
+.standings-view .card { border:1px solid #e3eaf3; border-radius:14px; box-shadow:0 4px 22px rgba(20,43,80,.045)!important; }
+.standings-view .card-body { padding:18px; }
+.standings-view fieldset { background:#f8fafd; border:1px solid #e3eaf3!important; border-radius:12px!important; padding:18px!important; margin-top:24px!important; }
+.standings-view legend { color:#526580; font-size:12px!important; font-weight:600; }
+.standings-view fieldset > .d-flex { flex-wrap:wrap!important; gap:14px!important; align-items:flex-end!important; }
+.standings-view .standing-filter { flex:1 1 240px; min-width:0; }
+.standings-view .standing-filter label { display:block; color:#65748b; font-size:11px; margin-bottom:7px; font-weight:500; }
+.standings-view .form-select { height:42px!important; border:1px solid #dce4f0; border-radius:8px; color:#263b59; font-size:13px; background-color:#fff; }
+.standings-view .standing-filter .form-select { width:100%!important; }
+.standings-view .form-select:disabled { background:#eef2f7; color:#98a3b3; }
+.standings-view .btn { border-radius:8px; padding:9px 14px; font-size:12px; }
+.standings-view .btn-primary { background:#2563c5; border-color:#2563c5; }
+.standings-view .alert { border-radius:10px; padding:15px 18px; font-size:12px; }
+.standings-view .alert-info { background:#f0f5fc; border:1px solid #e1eaf5; color:#526d93; }
+.standings-view .table { min-width:950px; margin:0; font-size:12px; color:#263b59; border-color:#e8edf5; }
+.standings-view .table th { background:#f5f8fc; color:#64758e; padding:14px 12px; font-size:11px; font-weight:600; border-color:#e8edf5; white-space:nowrap; }
+.standings-view .table td { padding:13px 12px; vertical-align:top; border-color:#edf1f7; line-height:1.7; font-variant-numeric:tabular-nums; }
+.standings-view .table tbody tr { background:#fff; }
+.standings-view .table tbody tr:nth-child(even) { background:#fafbfd; }
+.standings-view .table td:last-child:not([colspan]) { font-weight:700; color:#193961; background:#edf3fb; }
+.standings-view .table td[colspan] { padding:32px 16px!important; color:#8794a7!important; }
+.standings-view .badge { border-radius:7px; padding:6px 9px; font-size:10px; }
+.standings-view #generateForm { flex-wrap:wrap!important; }
+.standings-view #generateWrap { max-width:100%; }
+.standings-view #generatePreset { max-width:100%; }
+.standings-view button:focus-visible, .standings-view a:focus-visible, .standings-view select:focus-visible { outline:2px solid #5284ce; outline-offset:3px; }
+@media(max-width:767px) { .standings-view { padding-left:0!important; padding-right:0!important; } .standings-view .standing-filter { flex-basis:100%; } .standings-view .card-body { padding:12px; } }
+}

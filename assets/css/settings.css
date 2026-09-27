@@ -1,0 +1,49 @@
+/* Settings presentation is isolated from saved configuration and other pages. */
+@media screen {
+.settings-view { color:#263b59; }
+.settings-eyebrow { font-size:10px; font-weight:700; color:#62748e; letter-spacing:1.7px; margin-bottom:10px; }
+.settings-view .page-heading h3 { font-size:30px; font-weight:700; letter-spacing:-.7px; color:#142b50; margin:0; }
+.settings-description { color:#758298; font-size:13px; margin:8px 0 0; }
+.settings-view .page-heading .row { row-gap:16px; }
+.settings-view .page-heading .col-auto { display:flex; gap:8px; flex-wrap:wrap; }
+.settings-view .button, .settings-view .btn { border-radius:8px; font-size:12px; padding:10px 16px; min-height:39px; }
+.settings-view .page-heading .button { margin:0; }
+.settings-view .button-primary, .settings-view .btn-primary { background:#2563c5; border-color:#2563c5; color:#fff; }
+.settings-view .page-heading .button-outline { color:#a64c60; background:#fff; border:1px solid #efd6dc; }
+.settings-view > .row > .col-12 > .box { background:#fff; border:1px solid #e3eaf3; border-radius:16px; box-shadow:0 4px 22px rgba(20,43,80,.045); }
+.settings-view > .row > .col-12 > .box > .box-body { padding:0; }
+.settings-view #settingsTabs { display:flex; gap:6px; flex-wrap:wrap; padding:16px 20px; margin:0!important; border-bottom:1px solid #e8edf5; background:#fafbfd; border-radius:16px 16px 0 0; }
+.settings-view #settingsTabs .nav-link { display:flex; align-items:center; gap:5px; border:0; border-radius:9px; color:#65748b; background:transparent; padding:11px 14px; font-size:12px; font-weight:600; margin:0; }
+.settings-view #settingsTabs .nav-link.active { background:#183b68; color:#fff; box-shadow:0 3px 8px rgba(24,59,104,.12); }
+.settings-view #settingsTabs .nav-link:not(.active):hover { background:#eaf0f9; color:#183b68; }
+.settings-view #settingsTabContent { padding:22px; }
+.settings-view #settingsTabContent .row { margin-left:-10px; margin-right:-10px; }
+.settings-view #settingsTabContent .row > [class*="col-"] { padding-left:10px; padding-right:10px; }
+.settings-view #settingsTabContent .box { background:#fff; border:1px solid #e3eaf3; border-radius:12px; box-shadow:none; margin-bottom:20px!important; }
+.settings-view #settingsTabContent .box-head { background:#f8fafd; border-bottom:1px solid #e8edf5; padding:17px 20px; border-radius:12px 12px 0 0; }
+.settings-view #settingsTabContent .box-head h4, .settings-view #settingsTabContent .box-head h3 { font-size:15px; font-weight:600; color:#193961; margin:0; }
+.settings-view #settingsTabContent .box-head i { color:#56739c; }
+.settings-view #settingsTabContent .box-body { padding:20px; }
+.settings-view .form-label { color:#526580; font-size:12px; font-weight:500; margin-bottom:7px; }
+.settings-view .form-control, .settings-view .form-select { border:1px solid #dce4f0; border-radius:8px; font-size:13px; color:#263b59; background-color:#fff; min-height:40px; }
+.settings-view input.form-control:not([type="color"]):not([type="file"]), .settings-view textarea.form-control { padding:10px 12px; }
+.settings-view textarea.form-control { min-height:100px; }
+.settings-view .form-control-color { width:60px; padding:5px; }
+.settings-view .form-control:focus, .settings-view .form-select:focus { border-color:#5284ce; box-shadow:0 0 0 3px rgba(37,99,197,.1); }
+.settings-view .form-control:disabled, .settings-view .form-select:disabled { background:#f0f3f8; }
+.settings-view .form-text { color:#8794a7; font-size:11px; line-height:1.5; margin-top:6px; }
+.settings-view .form-check-label { font-size:12px; color:#526580; }
+.settings-view .form-check { margin-bottom:8px; }
+.settings-view .form-check-input { accent-color:#2563c5; }
+.settings-view .alert { border-radius:10px; font-size:12px; line-height:1.6; }
+.settings-view a:focus-visible, .settings-view button:focus-visible, .settings-view input[type="checkbox"]:focus-visible { outline:2px solid #5284ce; outline-offset:3px; }
+@media(max-width:767px) {
+.settings-view { padding-left:0!important; padding-right:0!important; }
+.settings-view #settingsTabs { padding:12px; gap:4px; }
+.settings-view #settingsTabs .nav-link { font-size:11px; padding:9px 10px; }
+.settings-view #settingsTabContent { padding:12px; }
+.settings-view #settingsTabContent .box-body { padding:16px; }
+.settings-view #settingsTabContent .box-head { padding:15px 16px; }
+.settings-view .page-heading .col { flex-basis:100%; }
+}
+}

@@ -1,0 +1,36 @@
+@media screen {
+.contingent-admin-view { color:#263b59; }
+.contingent-admin-view .contingent-heading .card { background:transparent!important; border:0; box-shadow:none!important; }
+.contingent-admin-view .contingent-heading .card-body { padding:0!important; }
+.contingent-eyebrow { font-size:10px; font-weight:700; letter-spacing:1.7px; color:#62748e; margin-bottom:10px; }
+.contingent-admin-view h2 { font-size:30px; font-weight:700; color:#142b50; letter-spacing:-.7px; }
+.contingent-heading p { font-size:13px; margin-top:8px; color:#758298!important; }
+.contingent-admin-view .card { border:1px solid #e3eaf3; border-radius:16px; box-shadow:0 4px 22px rgba(20,43,80,.045)!important; overflow:hidden; }
+.contingent-admin-view .card-header { padding:18px 20px; background:#fff; border-bottom:1px solid #e8edf5; color:#1b3153; font-size:15px; }
+.contingent-count { display:inline-block; margin-left:12px; padding:5px 10px; border-radius:20px; background:#edf3fb; color:#526d93; font-size:10px; font-weight:600; }
+.contingent-admin-view .card-body { padding:16px; }
+#contingentTableWrap > table { min-width:1040px; margin:0; color:#263b59; font-size:12px; }
+#contingentTableWrap > table > thead > tr > th { background:#f5f8fc; color:#64758e; border-top:0; border-bottom:1px solid #e8edf5; padding:14px 12px; font-size:11px; font-weight:600; white-space:nowrap; }
+#contingentTableWrap > table > tbody > tr > td { padding:14px 12px; line-height:1.7; vertical-align:middle; border-color:#edf1f7; }
+#contingentTableWrap > table > tbody > tr:not(.details-row) { background:#fff; }
+#contingentTableWrap > table > tbody > tr:not(.details-row):nth-child(even) { background:#fafbfd; }
+#contingentTableWrap > table > tbody > tr:not(.details-row):hover, #contingentTableWrap > table > tbody > tr.row-highlight { background:#edf4ff; }
+#contingentTableWrap > table > tbody > tr:not(.details-row) > td:first-child { color:#8795aa; font-size:11px; text-align:center; }
+#contingentTableWrap > table > tbody > tr:not(.details-row) > td:nth-child(2) { color:#193961; white-space:normal; }
+#contingentTableWrap > table > tbody > tr:not(.details-row) > td:nth-child(4) { white-space:normal; }
+#contingentTableWrap > table > tbody > tr:not(.details-row) > td:nth-child(5) { font-variant-numeric:tabular-nums; white-space:nowrap; }
+#contingentTableWrap > table > tbody > tr:not(.details-row) .badge { min-width:34px; padding:6px 9px; border-radius:7px; font-size:11px; background:#eaf1fc; color:#31598e; }
+#contingentTableWrap > table > tbody > tr:not(.details-row) .badge-danger { background:#fceef0; color:#a54857; }
+.contingent-admin-view .contingent-view-btn { border:1px solid #d8e4f4; border-radius:8px; background:#f1f5fc; color:#31598e; padding:7px 13px; font-size:12px; }
+.contingent-admin-view .contingent-view-btn:hover { background:#dfeafa; border-color:#9dbce7; }
+.contingent-admin-view .row-highlight .contingent-view-btn { background:#183b68; color:#fff; }
+.contingent-admin-view button:focus-visible, .contingent-admin-view input:focus-visible, .contingent-admin-view select:focus-visible { outline:2px solid #5284ce; outline-offset:3px; }
+.contingent-admin-view .details-row > td { background:#f8fafd; }
+.contingent-admin-view .participant-section { background:#fff; border:1px solid #e3eaf3; border-radius:12px; padding:16px; }
+.contingent-admin-view .participant-section h6 { font-size:14px; font-weight:600; }
+.contingent-admin-view .details-top-controls { gap:12px; padding:12px 0; flex-wrap:wrap; }
+.contingent-admin-view .details-top-controls .left-controls, .contingent-admin-view .details-top-controls .right-controls { flex-wrap:wrap; gap:8px; }
+.contingent-admin-view .details-top-controls input, .contingent-admin-view .details-top-controls select { min-height:38px; border:1px solid #dce4f0; border-radius:8px; font-size:12px; }
+.contingent-admin-view .details-row .btn { border-radius:7px; font-size:11px; }
+@media(max-width:767px) { .contingent-admin-view { padding-left:0!important; padding-right:0!important; } .contingent-admin-view .card-body { padding:10px; } .contingent-admin-view .card-header { padding:16px; } }
+}

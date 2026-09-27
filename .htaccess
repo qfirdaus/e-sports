@@ -1,0 +1,26 @@
+# Apache Configuration for SAM 2026
+
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Set base directory (root)
+RewriteBase /
+
+# Prevent directory listing
+Options -Indexes
+
+# Default page
+DirectoryIndex index.php
+
+# Security headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# PHP Settings (if needed)
+<IfModule mod_php.c>
+    php_value upload_max_filesize 10M
+    php_value post_max_size 10M
+</IfModule>

@@ -1,0 +1,27 @@
+/* University reference page shares the management layout. */
+@media screen {
+.university-view .table { table-layout:fixed; min-width:1180px; width:100%; }
+.university-view .table th, .university-view .table td { vertical-align:top!important; }
+.university-view .table th:first-child { width:40px!important; }
+.university-view .table th:nth-child(2) { width:75px; }
+.university-view .table th:nth-child(3) { width:26%; }
+.university-view .table th:nth-child(4) { width:65px; }
+.university-view .table th:nth-child(5) { width:14%; }
+.university-view .table th:nth-child(6) { width:80px; }
+.university-view .table th:nth-child(7) { width:17%; }
+.university-view .table th:nth-child(8) { width:110px; }
+.university-view .table th:nth-child(9) { width:90px!important; }
+.university-view .table th:nth-child(10) { width:96px!important; }
+.university-view .table td { white-space:normal; overflow-wrap:anywhere; }
+.university-view .table td:nth-child(3) { color:#193961; font-weight:500; }
+.university-view .table td:nth-child(2) { color:#526d93; font-weight:600; }
+.university-view .table td:nth-child(8) { font-variant-numeric:tabular-nums; white-space:nowrap; }
+.university-view .table .badge.bg-secondary { background:#eef0f4!important; color:#6a7689; border-radius:20px; }
+#universityModal .modal-content { border:1px solid #e3eaf3; border-radius:14px; }
+#universityModal .modal-header { background:#f8fafd; border-bottom:1px solid #e8edf5; padding:20px; }
+#universityModal .modal-title { color:#193961; font-size:18px; font-weight:600; }
+#universityModal .form-label { color:#526580; font-size:12px; font-weight:500; }
+#universityModal .form-control, #universityModal .form-select { border-color:#dce4f0; border-radius:8px; font-size:13px; }
+#universityModal .btn { border-radius:8px; }
+#universityModal .form-control:focus, #universityModal .form-select:focus { border-color:#5284ce; box-shadow:0 0 0 3px rgba(37,99,197,.1); }
+}

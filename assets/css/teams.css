@@ -1,0 +1,34 @@
+@media screen {
+.teams-view #pasukanTableWrap th, .teams-view #pasukanTableWrap td { vertical-align:top!important; }
+.teams-view .management-stats { flex-wrap:wrap; }
+.teams-view .management-stats > div { padding:10px 13px; }
+.teams-view .card-header { background:#f8fafd; }
+.teams-view .card-header > .d-flex:first-child { flex:1 1 460px; gap:8px; min-width:0; }
+.teams-view .card-header > .d-flex:first-child > div { margin-right:0!important; min-width:0!important; }
+.teams-view .card-header > .d-flex:first-child > div:first-child { flex:1 1 280px; }
+.teams-view .card-header > .d-flex:first-child > div:last-child { flex:0 1 210px; }
+.teams-view .card-header > .d-flex:last-child { flex:0 1 auto; }
+.teams-view .form-select, .teams-view .card-header .form-control { border:1px solid #dce4f0; border-radius:8px; min-height:40px; font-size:12px; color:#263b59; background-color:#fff; }
+.teams-view .custom-select-display { border:1px solid #dce4f0; border-radius:8px; min-height:40px; display:flex; align-items:center; font-size:12px; background:#fff; }
+.teams-view #pasukanTableWrap table { min-width:1120px; }
+.teams-view #pasukanTableWrap td .cell-inner { white-space:normal; overflow-wrap:anywhere; overflow:visible; text-overflow:clip; }
+.teams-view #pasukanTableWrap td { white-space:normal; }
+.teams-view #pasukanTableWrap .badge.bg-info, .teams-view #pasukanTableWrap .badge-info { background:#eaf1fc!important; color:#31598e; min-width:30px; }
+.teams-view #pasukanTableWrap td:nth-child(7), .teams-view #pasukanTableWrap th:nth-child(7) { text-align:center; font-variant-numeric:tabular-nums; }
+.teams-view #pasukanPaginationWrap { padding-top:16px; border-top:1px solid #edf1f7; }
+.teams-view #pasukanPagination { gap:6px; flex-wrap:wrap; }
+.teams-view #pasukanPagination .page-link { border:1px solid #dce4f0; border-radius:8px; color:#526d93; padding:8px 12px; font-size:12px; box-shadow:none; }
+.teams-view #pasukanPagination .active .page-link { background:#183b68; border-color:#183b68; color:#fff; }
+.teams-view #pasukanPagination .disabled .page-link { color:#a0adbe; background:#f8fafd; }
+#addPasukanModal .modal-content, #bulkUploadPasukanModal .modal-content { border:1px solid #e3eaf3; border-radius:14px; }
+#addPasukanModal .modal-header, #bulkUploadPasukanModal .modal-header { background:#f8fafd; border-bottom:1px solid #e8edf5; padding:20px; }
+#addPasukanModal .modal-title, #bulkUploadPasukanModal .modal-title { color:#193961; font-size:18px; font-weight:600; }
+#addPasukanModal .form-control, #addPasukanModal .form-select { border-color:#dce4f0; border-radius:8px; font-size:13px; }
+#addPasukanModal .btn, #bulkUploadPasukanModal .btn { border-radius:8px; }
+@media(max-width:767px) {
+.teams-view .card-header > .d-flex:first-child { flex-wrap:wrap; flex-basis:100%; }
+.teams-view .card-header > .d-flex:first-child > div { flex:1 1 100%!important; }
+.teams-view .card-header > .d-flex:last-child { width:100%; flex-wrap:wrap; gap:8px; }
+.teams-view #pasukanSearchTop { width:100%!important; margin-left:0!important; }
+}
+}
